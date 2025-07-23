@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import { format, isToday, isWeekend, startOfMonth, endOfMonth } from 'date-fns';
 import { id } from 'date-fns/locale';
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '../hooks/supabaseClient';
 import AttendanceForm from '../components/AttendanceForm';
 import NotificationSystem from '../components/NotificationSystem';
 import AttendanceHistory from './AttendanceHistory';

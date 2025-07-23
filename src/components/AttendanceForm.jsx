@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Swal from 'sweetalert2';
 import { Clock, MapPin, Camera, CheckCircle, AlertCircle, User, Edit, Bell, XCircle, Info } from 'lucide-react';
-import { supabase, getOfficeLocation, getCameraVerificationSettings } from '../utils/supabaseClient';
-import { processImageUrl, compareFaceFingerprints } from '../utils/customFaceRecognition';
+import { supabase, getOfficeLocation, getCameraVerificationSettings } from '../hooks/supabaseClient';
+import { processImageUrl, compareFaceFingerprints } from '../hooks/customFaceRecognition';
 import CustomFaceCapture from './CustomFaceCapture';
 import LocationValidator from './LocationValidator';
 
@@ -423,7 +423,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
       }
 
       // Show success alert with more details
-      await Swal.fire({
+      Swal.fire({
         icon: 'success',
         title: `Absensi ${attendanceType === 'masuk' ? 'Masuk' : 'Keluar'} Berhasil`,
         html: `
@@ -439,12 +439,11 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
         confirmButtonColor: '#10b981',
         timer: 5000,
         timerProgressBar: true,
-        willClose: () => {
-          if (onAttendanceSubmitted) {
-            onAttendanceSubmitted(data[0]);
-          }
-          resetForm();
+      }).then(() => {
+        if (onAttendanceSubmitted) {
+          onAttendanceSubmitted(data[0]);
         }
+        resetForm();
       });
 
     } catch (err) {
@@ -469,11 +468,11 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
 
       await supabase.from('attendance').insert([failedData]);
       
-      await Swal.fire({
+      Swal.fire({
         icon: 'error',
         title: `Absensi ${attendanceType === 'masuk' ? 'Masuk' : 'Keluar'} Gagal`,
         text: err.message || 'Terjadi kesalahan saat absensi',
-        confirmButtonText: 'OK',
+        confirmButtonText: 'Coba Lagi',
         confirmButtonColor: '#3085d6'
       });
       setError(err.message);
@@ -524,7 +523,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
   if (cameraVerificationEnabled && !storedFingerprint) {
     if (error && error.includes('Foto profil')) {
       return (
-        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl">
+        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl w-full">
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-8 text-white">
             <h2 className="text-2xl font-bold mb-2">Absensi Karyawan</h2>
             <p className="opacity-90">Setup diperlukan untuk melanjutkan</p>
@@ -572,7 +571,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
     }
 
     return (
-      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl">
+      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl w-full">
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-8 text-white">
           <h2 className="text-2xl font-bold mb-2">Absensi Karyawan</h2>
           <p className="opacity-90">Memuat data verifikasi...</p>
@@ -586,7 +585,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
   }
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl">
+    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl w-full">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-8 text-white">
         <div className="flex items-center space-x-4 mb-4">
