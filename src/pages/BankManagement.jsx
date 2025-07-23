@@ -14,7 +14,7 @@ import {
   CreditCard,
   Code
 } from 'lucide-react';
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '../hooks/supabaseClient';
 import AdminSidebar from '../components/AdminSidebar';
 
 const BankManagement = () => {

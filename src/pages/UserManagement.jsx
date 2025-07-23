@@ -19,7 +19,7 @@ import {
   AlertTriangle,
   XCircle
 } from 'lucide-react';
-import { supabase, uploadFile, getFileUrl } from '../utils/supabaseClient';
+import { supabase, uploadFile, getFileUrl } from '../hooks/supabaseClient';
 import Swal from './swal';
 import ProfileModal from '../components/ProfileModal';
 import CustomFaceCapture from '../components/CustomFaceCapture';

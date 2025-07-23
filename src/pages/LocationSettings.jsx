@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, MapPin, Save, Edit, AlertCircle, CheckCircle, Navigation } from 'lucide-react';
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '../hooks/supabaseClient';
 import SimpleLocationPicker from '../components/SimpleLocationPicker';
 import AdminSidebar from '../components/AdminSidebar';
 

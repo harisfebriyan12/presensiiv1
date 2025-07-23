@@ -2,7 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { LogIn, Mail, Lock, AlertCircle, Building2, CheckCircle, Eye, EyeOff } from 'lucide-react';
-import { supabase, isSupabaseConfigured } from '../utils/supabaseClient';
+import { supabase, isSupabaseConfigured } from '../hooks/supabaseClient';
 import RecaptchaInfo from '../components/RecaptchaInfo';
 
 // Lazy load ReCAPTCHA untuk performa yang lebih baik

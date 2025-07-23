@@ -15,7 +15,7 @@ import {
   Calendar,
   ChevronLeft
 } from 'lucide-react';
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '../hooks/supabaseClient';
 
 const AdminSidebar = ({ user, profile, isCollapsed, setIsCollapsed }) => {
   const navigate = useNavigate();

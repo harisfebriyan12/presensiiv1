@@ -22,7 +22,7 @@ import {
   Download,
   Save
 } from 'lucide-react';
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '../hooks/supabaseClient';
 import Swal from 'sweetalert2';
 import NotificationSystem from '../components/NotificationSystem';
 import WarningLetterGenerator from '../components/WarningLetterGenerator';
