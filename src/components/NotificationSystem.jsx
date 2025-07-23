@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Bell, X, CheckCircle, AlertTriangle, Clock, FileText, User, Calendar } from 'lucide-react';
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '../hooks/supabaseClient';
 
 const NotificationSystem = ({ userId, userRole }) => {
   const [notifications, setNotifications] = useState([]);

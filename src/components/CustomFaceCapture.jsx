@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import * as faceapi from 'face-api.js';
-import { loadFaceModels } from '../utils/faceModels';
-import { generateFaceFingerprint, detectFacePattern } from '../utils/customFaceRecognition';
+import { loadFaceModels } from '../hooks/faceModels';
+import { generateFaceFingerprint, detectFacePattern } from '../hooks/customFaceRecognition';
 
 const CustomFaceCapture = ({ onFaceCapture, isCapturing = false }) => {
   const videoRef = useRef(null);

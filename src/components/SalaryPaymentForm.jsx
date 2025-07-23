@@ -14,7 +14,7 @@ import {
   Clock,
   Briefcase
 } from 'lucide-react';
-import { supabase } from '../utils/supabaseClient';
+import { supabase } from '../hooks/supabaseClient';
 
 const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
   const [loading, setLoading] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Camera, User, Save, ArrowLeft, CheckCircle, AlertCircle, Lock, Mail, Phone, MapPin, Edit, CreditCard, Building, AlertTriangle } from 'lucide-react';
-import { supabase, uploadFile, getFileUrl } from '../utils/supabaseClient';
+import { supabase, uploadFile, getFileUrl } from '../hooks/supabaseClient';
 import CustomFaceCapture from '../components/CustomFaceCapture';
 
 const ProfileSetup = () => {
