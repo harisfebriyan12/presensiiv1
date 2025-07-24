@@ -315,9 +315,9 @@ const SalaryManagement = () => {
   const getRoleColor = (role) => {
     switch (role) {
       case 'admin':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-tosca-100 text-tosca-800';
       case 'kepala':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-tosca-100 text-tosca-800';
       default:
         return 'bg-green-100 text-green-800';
     }
@@ -382,7 +382,7 @@ const SalaryManagement = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -396,7 +396,7 @@ const SalaryManagement = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 shadow-sm border-b">
+      <div className="bg-gradient-to-r from-tosca-600 to-tosca-700 shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-4">
@@ -408,14 +408,14 @@ const SalaryManagement = () => {
               </button>
               <div>
                 <h1 className="text-2xl font-bold text-white">Kelola Gaji Karyawan</h1>
-                <p className="text-sm text-blue-100">
+                <p className="text-sm text-tosca-100">
                   Atur gaji, rekening bank, dan status pembayaran karyawan
                 </p>
               </div>
             </div>
             <button
               onClick={fetchEmployees}
-              className="flex items-center space-x-2 px-4 py-2 bg-white text-blue-700 rounded-lg hover:bg-white/90 transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 bg-white text-tosca-700 rounded-lg hover:bg-white/90 transition-colors"
             >
               <RefreshCw className="h-4 w-4" />
               <span>Refresh Data</span>
@@ -456,8 +456,8 @@ const SalaryManagement = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <Users className="h-6 w-6 text-blue-600" />
+              <div className="w-12 h-12 bg-tosca-100 rounded-full flex items-center justify-center">
+                <Users className="h-6 w-6 text-tosca-600" />
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Total Karyawan</p>
@@ -481,8 +481,8 @@ const SalaryManagement = () => {
 
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <TrendingUp className="h-6 w-6 text-blue-600" />
+              <div className="w-12 h-12 bg-tosca-100 rounded-full flex items-center justify-center">
+                <TrendingUp className="h-6 w-6 text-tosca-600" />
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Rata-rata Gaji Harian</p>
@@ -494,8 +494,8 @@ const SalaryManagement = () => {
 
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <CheckCircle className="h-6 w-6 text-blue-600" />
+              <div className="w-12 h-12 bg-tosca-100 rounded-full flex items-center justify-center">
+                <CheckCircle className="h-6 w-6 text-tosca-600" />
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Status Pembayaran</p>
@@ -521,7 +521,7 @@ const SalaryManagement = () => {
                     placeholder="Cari nama, email, atau ID karyawan..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -529,7 +529,7 @@ const SalaryManagement = () => {
                 <select
                   value={filterDepartment}
                   onChange={(e) => setFilterDepartment(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 >
                   <option value="">Semua Departemen</option>
                   {stats.departments.map(dept => (
@@ -541,7 +541,7 @@ const SalaryManagement = () => {
                 <select
                   value={filterPaymentStatus}
                   onChange={(e) => setFilterPaymentStatus(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 >
                   <option value="">Semua Status Pembayaran</option>
                   <option value="paid">Sudah Dibayar</option>
@@ -558,7 +558,7 @@ const SalaryManagement = () => {
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200">
             <div className="flex items-center space-x-2">
-              <DollarSign className="h-5 w-5 text-blue-600" />
+              <DollarSign className="h-5 w-5 text-tosca-600" />
               <h2 className="text-lg font-medium text-gray-900">
                 Daftar Gaji Karyawan ({filteredEmployees.length})
               </h2>
@@ -605,8 +605,8 @@ const SalaryManagement = () => {
                       <tr key={employee.id} className="hover:bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center">
-                            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                              <span className="text-blue-600 font-medium">
+                            <div className="w-10 h-10 bg-tosca-100 rounded-full flex items-center justify-center">
+                              <span className="text-tosca-600 font-medium">
                                 {employee.name.charAt(0).toUpperCase()}
                               </span>
                             </div>
@@ -690,7 +690,7 @@ const SalaryManagement = () => {
                           <div className="flex space-x-2">
                             <button
                               onClick={() => handleEditEmployee(employee)}
-                              className="text-blue-600 hover:text-blue-900 p-1 hover:bg-blue-50 rounded"
+                              className="text-tosca-600 hover:text-tosca-900 p-1 hover:bg-tosca-50 rounded"
                               title="Edit Gaji & Rekening"
                             >
                               <Edit className="h-4 w-4" />
@@ -756,7 +756,7 @@ const SalaryManagement = () => {
                         type="text"
                         value={editForm.employee_id}
                         onChange={(e) => setEditForm({...editForm, employee_id: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: EMP001"
                       />
                     </div>
@@ -768,7 +768,7 @@ const SalaryManagement = () => {
                         type="text"
                         value={editForm.title}
                         onChange={(e) => setEditForm({...editForm, title: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: Staff IT"
                       />
                     </div>
@@ -780,7 +780,7 @@ const SalaryManagement = () => {
                         type="text"
                         value={editForm.department}
                         onChange={(e) => setEditForm({...editForm, department: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: IT, HR, Finance"
                       />
                     </div>
@@ -788,7 +788,7 @@ const SalaryManagement = () => {
                 </div>
 
                 {/* Bank Account Information */}
-                <div className="bg-blue-50 p-4 rounded-lg">
+                <div className="bg-tosca-50 p-4 rounded-lg">
                   <h3 className="font-medium text-gray-900 mb-4">Informasi Rekening Bank</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -799,7 +799,7 @@ const SalaryManagement = () => {
                         type="text"
                         value={editForm.bank_name}
                         onChange={(e) => setEditForm({...editForm, bank_name: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: BCA, Mandiri, BNI"
                       />
                     </div>
@@ -811,7 +811,7 @@ const SalaryManagement = () => {
                         type="text"
                         value={editForm.bank_account_number}
                         onChange={(e) => setEditForm({...editForm, bank_account_number: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: 1234567890"
                       />
                     </div>
@@ -823,7 +823,7 @@ const SalaryManagement = () => {
                         type="text"
                         value={editForm.bank_account_name}
                         onChange={(e) => setEditForm({...editForm, bank_account_name: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Nama lengkap sesuai rekening"
                       />
                     </div>
@@ -842,7 +842,7 @@ const SalaryManagement = () => {
                         type="number"
                         value={editForm.daily_salary}
                         onChange={(e) => setEditForm({...editForm, daily_salary: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="300000"
                         min="0"
                       />
@@ -859,7 +859,7 @@ const SalaryManagement = () => {
                         step="0.1"
                         value={editForm.overtime_rate}
                         onChange={(e) => setEditForm({...editForm, overtime_rate: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="1.5"
                         min="1"
                         max="3"
@@ -883,7 +883,7 @@ const SalaryManagement = () => {
                         type="number"
                         value={editForm.bonus}
                         onChange={(e) => setEditForm({...editForm, bonus: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="0"
                         min="0"
                       />
@@ -896,7 +896,7 @@ const SalaryManagement = () => {
                         type="number"
                         value={editForm.deduction}
                         onChange={(e) => setEditForm({...editForm, deduction: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="0"
                         min="0"
                       />
@@ -927,7 +927,7 @@ const SalaryManagement = () => {
                   </button>
                   <button
                     onClick={handleSaveChanges}
-                    className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                    className="flex-1 bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 transition-colors"
                   >
                     <div className="flex items-center justify-center space-x-2">
                       <Save className="h-4 w-4" />
@@ -961,7 +961,7 @@ const SalaryManagement = () => {
 
               <div className="space-y-6">
                 {/* Employee Info */}
-                <div className="bg-blue-50 p-4 rounded-lg">
+                <div className="bg-tosca-50 p-4 rounded-lg">
                   <h3 className="font-medium text-gray-900 mb-4">Informasi Karyawan</h3>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
@@ -1024,7 +1024,7 @@ const SalaryManagement = () => {
                         type="number"
                         value={paymentForm.amount}
                         onChange={(e) => setPaymentForm({...paymentForm, amount: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         min="0"
                       />
                     </div>
@@ -1035,7 +1035,7 @@ const SalaryManagement = () => {
                       <select
                         value={paymentForm.payment_method}
                         onChange={(e) => setPaymentForm({...paymentForm, payment_method: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                       >
                         <option value="bank_transfer">Transfer Bank</option>
                         <option value="cash">Tunai</option>
@@ -1050,7 +1050,7 @@ const SalaryManagement = () => {
                         type="text"
                         value={paymentForm.payment_reference}
                         onChange={(e) => setPaymentForm({...paymentForm, payment_reference: e.target.value})}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Nomor referensi atau kode transaksi"
                       />
                     </div>
@@ -1063,7 +1063,7 @@ const SalaryManagement = () => {
                           type="date"
                           value={paymentForm.payment_period_start}
                           onChange={(e) => setPaymentForm({...paymentForm, payment_period_start: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         />
                       </div>
                       <div>
@@ -1074,7 +1074,7 @@ const SalaryManagement = () => {
                           type="date"
                           value={paymentForm.payment_period_end}
                           onChange={(e) => setPaymentForm({...paymentForm, payment_period_end: e.target.value})}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         />
                       </div>
                     </div>
@@ -1086,7 +1086,7 @@ const SalaryManagement = () => {
                         value={paymentForm.notes}
                         onChange={(e) => setPaymentForm({...paymentForm, notes: e.target.value})}
                         rows={3}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Catatan tambahan untuk pembayaran ini"
                       />
                     </div>

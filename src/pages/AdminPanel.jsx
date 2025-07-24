@@ -329,7 +329,7 @@ const AdminPanel = () => {
   const getRoleColor = (role) => {
     switch (role) {
       case 'admin':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-tosca-100 text-tosca-800';
       default:
         return 'bg-green-100 text-green-800';
     }
@@ -385,7 +385,7 @@ const AdminPanel = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -435,7 +435,7 @@ const AdminPanel = () => {
                 </button>
                 <button
                   onClick={() => setShowExportModal(true)}
-                  className="p-2 lg:px-3 lg:py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                  className="p-2 lg:px-3 lg:py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 transition-colors duration-200"
                 >
                   <Download className="h-4 w-4" />
                   <span className="hidden lg:inline ml-2">Export</span>
@@ -454,7 +454,7 @@ const AdminPanel = () => {
               title="Karyawan"
               value={stats.totalUsers}
               footer={`${stats.activeUsers} aktif`}
-              color="blue"
+              color="tosca"
             />
             <StatCard
               icon={CheckCircle}
@@ -508,7 +508,7 @@ const AdminPanel = () => {
                           <div className="flex space-x-2">
                             <button
                               onClick={() => handleViewEmployee(record.profiles)}
-                              className="text-blue-600 hover:text-blue-800 p-1"
+                              className="text-tosca-600 hover:text-tosca-800 p-1"
                               title="Lihat Detail"
                             >
                               <Eye className="h-4 w-4" />
@@ -562,7 +562,7 @@ const AdminPanel = () => {
                           <div className="flex space-x-2">
                             <button
                               onClick={() => handleViewEmployee(employee)}
-                              className="text-blue-600 hover:text-blue-800 p-1"
+                              className="text-tosca-600 hover:text-tosca-800 p-1"
                               title="Lihat Detail"
                             >
                               <Eye className="h-4 w-4" />
@@ -594,14 +594,14 @@ const AdminPanel = () => {
           <div className="bg-white rounded-lg shadow-md">
             <div className="px-6 py-4 border-b border-gray-200">
               <div className="flex items-center space-x-2">
-                <Database className="h-5 w-5 text-blue-600" />
+                <Database className="h-5 w-5 text-tosca-600" />
                 <h2 className="text-lg font-medium text-gray-900">Informasi Sistem</h2>
               </div>
             </div>
             <div className="p-6">
               <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex items-center space-x-3">
-                  <Database className="h-8 w-8 text-blue-600" />
+                  <Database className="h-8 w-8 text-tosca-600" />
                   <div>
                     <p className="font-medium text-gray-900">Database</p>
                     <p className="text-sm text-gray-600">Supabase PostgreSQL</p>
@@ -662,42 +662,42 @@ const AdminPanel = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-blue-50 p-6 rounded-lg">
+                <div className="bg-tosca-50 p-6 rounded-lg">
                   <div className="flex items-start space-x-4">
-                    <Database className="h-8 w-8 text-blue-600 flex-shrink-0 mt-1" />
+                    <Database className="h-8 w-8 text-tosca-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-blue-900 mb-2">Export Database Supabase</h3>
-                      <p className="text-blue-700 mb-4">
+                      <h3 className="text-lg font-semibold text-tosca-900 mb-2">Export Database Supabase</h3>
+                      <p className="text-tosca-700 mb-4">
                         Untuk mengekspor seluruh database Supabase termasuk skema, data, dan storage, ikuti langkah-langkah berikut:
                       </p>
                       <div className="space-y-4">
-                        <div className="bg-white p-4 rounded-lg border border-blue-200">
-                          <h4 className="font-medium text-blue-800 mb-2">1. Akses Dashboard Supabase</h4>
-                          <p className="text-sm text-blue-700">
-                            Login ke dashboard Supabase project Anda di <a href="https://app.supabase.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">app.supabase.com</a>
+                        <div className="bg-white p-4 rounded-lg border border-tosca-200">
+                          <h4 className="font-medium text-tosca-800 mb-2">1. Akses Dashboard Supabase</h4>
+                          <p className="text-sm text-tosca-700">
+                            Login ke dashboard Supabase project Anda di <a href="https://app.supabase.com" target="_blank" rel="noopener noreferrer" className="text-tosca-600 underline">app.supabase.com</a>
                           </p>
                         </div>
-                        <div className="bg-white p-4 rounded-lg border border-blue-200">
-                          <h4 className="font-medium text-blue-800 mb-2">2. Buka Menu Database</h4>
-                          <p className="text-sm text-blue-700">
+                        <div className="bg-white p-4 rounded-lg border border-tosca-200">
+                          <h4 className="font-medium text-tosca-800 mb-2">2. Buka Menu Database</h4>
+                          <p className="text-sm text-tosca-700">
                             Pilih menu "Database" → "Backups" dari sidebar
                           </p>
                         </div>
-                        <div className="bg-white p-4 rounded-lg border border-blue-200">
-                          <h4 className="font-medium text-blue-800 mb-2">3. Generate Backup</h4>
-                          <p className="text-sm text-blue-700">
+                        <div className="bg-white p-4 rounded-lg border border-tosca-200">
+                          <h4 className="font-medium text-tosca-800 mb-2">3. Generate Backup</h4>
+                          <p className="text-sm text-tosca-700">
                             Klik tombol "Generate backup" untuk membuat backup terbaru dari database Anda
                           </p>
                         </div>
-                        <div className="bg-white p-4 rounded-lg border border-blue-200">
-                          <h4 className="font-medium text-blue-800 mb-2">4. Download Backup</h4>
-                          <p className="text-sm text-blue-700">
+                        <div className="bg-white p-4 rounded-lg border border-tosca-200">
+                          <h4 className="font-medium text-tosca-800 mb-2">4. Download Backup</h4>
+                          <p className="text-sm text-tosca-700">
                             Setelah backup selesai dibuat, klik tombol "Download" untuk mengunduh file SQL
                           </p>
                         </div>
-                        <div className="bg-white p-4 rounded-lg border border-blue-200">
-                          <h4 className="font-medium text-blue-800 mb-2">5. Export Storage (Opsional)</h4>
-                          <p className="text-sm text-blue-700">
+                        <div className="bg-white p-4 rounded-lg border border-tosca-200">
+                          <h4 className="font-medium text-tosca-800 mb-2">5. Export Storage (Opsional)</h4>
+                          <p className="text-sm text-tosca-700">
                             Untuk mengekspor file storage (seperti foto wajah), gunakan menu "Storage" dan download setiap bucket secara terpisah
                           </p>
                         </div>
@@ -721,7 +721,7 @@ const AdminPanel = () => {
                 <div className="flex justify-end">
                   <button
                     onClick={() => setShowExportModal(false)}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                    className="px-4 py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 transition-colors duration-200"
                   >
                     Tutup
                   </button>
@@ -747,8 +747,8 @@ const AdminPanel = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h3 className="font-medium text-blue-900 mb-3">Verifikasi Kamera</h3>
+                <div className="bg-tosca-50 p-4 rounded-lg">
+                  <h3 className="font-medium text-tosca-900 mb-3">Verifikasi Kamera</h3>
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <input
@@ -759,7 +759,7 @@ const AdminPanel = () => {
                           ...prev,
                           enabled: e.target.checked
                         }))}
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-tosca-600 focus:ring-tosca-500 border-gray-300 rounded"
                       />
                       <label htmlFor="camera-enabled" className="ml-2 block text-sm text-gray-900">
                         Aktifkan verifikasi wajah untuk absensi
@@ -793,7 +793,7 @@ const AdminPanel = () => {
                   </button>
                   <button
                     onClick={handleSaveCameraSettings}
-                    className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
+                    className="flex-1 bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 transition-colors duration-200"
                   >
                     <div className="flex items-center justify-center space-x-2">
                       <Save className="h-4 w-4" />
@@ -812,12 +812,12 @@ const AdminPanel = () => {
 
 const StatCard = ({ icon: Icon, title, value, footer, color }) => {
   const colors = {
-    blue: { bg: 'bg-blue-50', text: 'text-blue-700' },
+    tosca: { bg: 'bg-tosca-50', text: 'text-tosca-700' },
     green: { bg: 'bg-green-50', text: 'text-green-700' },
     orange: { bg: 'bg-orange-50', text: 'text-orange-700' },
     red: { bg: 'bg-red-50', text: 'text-red-700' },
   };
-  const selectedColor = colors[color] || colors.blue;
+  const selectedColor = colors[color] || colors.tosca;
 
   return (
     <div className="bg-white rounded-xl shadow-sm p-5 hover:shadow-md transition-shadow duration-200">

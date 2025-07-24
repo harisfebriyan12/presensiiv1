@@ -209,7 +209,7 @@ const DepartmentManagement = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -234,7 +234,7 @@ const DepartmentManagement = () => {
               </div>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="flex items-center justify-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors w-full sm:w-auto"
+                className="flex items-center justify-center space-x-2 px-4 py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 transition-colors w-full sm:w-auto"
               >
                 <Plus className="h-4 w-4" />
                 <span>Tambah Departemen</span>
@@ -273,8 +273,8 @@ const DepartmentManagement = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
             <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Building className="h-5 w-5 text-blue-600" />
+                <div className="w-10 h-10 bg-tosca-100 rounded-full flex items-center justify-center">
+                  <Building className="h-5 w-5 text-tosca-600" />
                 </div>
                 <div className="ml-3">
                   <p className="text-sm font-medium text-gray-600">Total Departemen</p>
@@ -317,7 +317,7 @@ const DepartmentManagement = () => {
                   placeholder="Cari departemen..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -326,7 +326,7 @@ const DepartmentManagement = () => {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="px-4 py-3 border-b border-gray-200">
               <div className="flex items-center space-x-2">
-                <Building className="h-5 w-5 text-blue-600" />
+                <Building className="h-5 w-5 text-tosca-600" />
                 <h2 className="text-base font-medium text-gray-900">
                   Daftar Departemen ({filteredDepartments.length})
                 </h2>
@@ -335,7 +335,7 @@ const DepartmentManagement = () => {
 
             {contentLoading ? (
               <div className="flex items-center justify-center py-12">
-                <div className="inline-flex space-x-1 text-blue-600">
+                <div className="inline-flex space-x-1 text-tosca-600">
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -376,8 +376,8 @@ const DepartmentManagement = () => {
                       <tr key={department.id} className="hover:bg-gray-50">
                         <td className="px-4 py-3 whitespace-nowrap">
                           <div className="flex items-center space-x-3">
-                            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                              <Building className="h-4 w-4 text-blue-600" />
+                            <div className="w-8 h-8 bg-tosca-100 rounded-full flex items-center justify-center">
+                              <Building className="h-4 w-4 text-tosca-600" />
                             </div>
                             <div className="text-sm font-medium text-gray-900">
                               {department.name}
@@ -406,7 +406,7 @@ const DepartmentManagement = () => {
                           <div className="flex space-x-2">
                             <button
                               onClick={() => handleEdit(department)}
-                              className="text-blue-600 hover:text-blue-900 p-1 hover:bg-blue-50 rounded"
+                              className="text-tosca-600 hover:text-tosca-900 p-1 hover:bg-tosca-50 rounded"
                               title="Edit Departemen"
                             >
                               <Edit className="h-4 w-4" />
@@ -430,8 +430,8 @@ const DepartmentManagement = () => {
                     <div key={department.id} className="bg-white rounded-lg shadow-md p-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                            <Building className="h-4 w-4 text-blue-600" />
+                          <div className="w-8 h-8 bg-tosca-100 rounded-full flex items-center justify-center">
+                            <Building className="h-4 w-4 text-tosca-600" />
                           </div>
                           <div>
                             <p className="text-sm font-medium text-gray-900">{department.name}</p>
@@ -443,7 +443,7 @@ const DepartmentManagement = () => {
                         <div className="flex space-x-2">
                           <button
                             onClick={() => handleEdit(department)}
-                            className="text-blue-600 hover:text-blue-900 p-1 rounded hover:bg-blue-50"
+                            className="text-tosca-600 hover:text-tosca-900 p-1 rounded hover:bg-tosca-50"
                           >
                             <Edit className="h-4 w-4" />
                           </button>
@@ -505,7 +505,7 @@ const DepartmentManagement = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent text-sm"
                         placeholder="Contoh: IT, HR, Finance"
                       />
                     </div>
@@ -519,7 +519,7 @@ const DepartmentManagement = () => {
                         value={formData.description}
                         onChange={handleInputChange}
                         rows={3}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent text-sm"
                         placeholder="Deskripsi singkat tentang departemen..."
                       />
                     </div>
@@ -533,7 +533,7 @@ const DepartmentManagement = () => {
                         name="head_name"
                         value={formData.head_name}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent text-sm"
                         placeholder="Nama kepala departemen"
                       />
                     </div>
@@ -546,7 +546,7 @@ const DepartmentManagement = () => {
                     name="is_active"
                     checked={formData.is_active}
                     onChange={handleInputChange}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-tosca-600 focus:ring-tosca-500 border-gray-300 rounded"
                   />
                   <label className="ml-2 block text-sm text-gray-900">
                     Departemen aktif
@@ -564,7 +564,7 @@ const DepartmentManagement = () => {
                   <button
                     type="submit"
                     disabled={contentLoading}
-                    className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm"
+                    className="flex-1 bg-tosca-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm"
                   >
                     <div className="flex items-center justify-center space-x-2">
                       <Save className="h-4 w-4" />

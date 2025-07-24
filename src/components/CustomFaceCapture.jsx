@@ -208,7 +208,7 @@ const CustomFaceCapture = ({ onFaceCapture, isCapturing = false }) => {
           <button
             onClick={handleCapture}
             disabled={isCapturing}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full disabled:bg-gray-500"
+            className="bg-tosca-500 hover:bg-tosca-700 text-white font-bold py-2 px-4 rounded-full disabled:bg-gray-500"
           >
             {isCapturing ? 'Memproses...' : 'Ambil Foto'}
           </button>

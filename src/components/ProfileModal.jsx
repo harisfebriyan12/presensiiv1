@@ -10,7 +10,7 @@ const ProfileModal = ({ profile, onClose }) => {
           <img
             src={profile.avatar_url || '/default-bank.png'}
             alt="Avatar"
-            className="w-28 h-28 rounded-full border-4 border-blue-200 shadow mb-4 object-cover"
+            className="w-28 h-28 rounded-full border-4 border-tosca-200 shadow mb-4 object-cover"
           />
           <h2 className="text-2xl font-bold text-gray-900 mb-1">{profile.name}</h2>
           <p className="text-gray-500 mb-2">{profile.position || profile.title || '-'}</p>

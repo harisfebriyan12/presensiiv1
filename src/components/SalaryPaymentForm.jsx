@@ -311,35 +311,35 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
 
           <div className="space-y-6">
             {/* Employee Info */}
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="font-medium text-blue-900 mb-3">Informasi Karyawan</h3>
+            <div className="bg-tosca-50 p-4 rounded-lg">
+              <h3 className="font-medium text-tosca-900 mb-3">Informasi Karyawan</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center space-x-3">
-                  <User className="h-5 w-5 text-blue-500" />
+                  <User className="h-5 w-5 text-tosca-500" />
                   <div>
-                    <p className="text-sm text-blue-700">Nama</p>
-                    <p className="font-medium text-blue-900">{employee.name}</p>
+                    <p className="text-sm text-tosca-700">Nama</p>
+                    <p className="font-medium text-tosca-900">{employee.name}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Briefcase className="h-5 w-5 text-blue-500" />
+                  <Briefcase className="h-5 w-5 text-tosca-500" />
                   <div>
-                    <p className="text-sm text-blue-700">Jabatan</p>
-                    <p className="font-medium text-blue-900">{employee.positions?.name_id || employee.title || 'Karyawan'}</p>
+                    <p className="text-sm text-tosca-700">Jabatan</p>
+                    <p className="font-medium text-tosca-900">{employee.positions?.name_id || employee.title || 'Karyawan'}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Building className="h-5 w-5 text-blue-500" />
+                  <Building className="h-5 w-5 text-tosca-500" />
                   <div>
-                    <p className="text-sm text-blue-700">Departemen</p>
-                    <p className="font-medium text-blue-900">{employee.department || '-'}</p>
+                    <p className="text-sm text-tosca-700">Departemen</p>
+                    <p className="font-medium text-tosca-900">{employee.department || '-'}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <DollarSign className="h-5 w-5 text-blue-500" />
+                  <DollarSign className="h-5 w-5 text-tosca-500" />
                   <div>
-                    <p className="text-sm text-blue-700">Gaji Bulanan</p>
-                    <p className="font-medium text-blue-900">
+                    <p className="text-sm text-tosca-700">Gaji Bulanan</p>
+                    <p className="font-medium text-tosca-900">
                       {formatCurrency(getEmployeeSalary())}
                     </p>
                   </div>
@@ -400,7 +400,7 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
                         onChange={handleInputChange}
                         required
                         min="1"
-                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: 5000000"
                       />
                     </div>
@@ -414,7 +414,7 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
                       value={formData.payment_method}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                     >
                       <option value="bank_transfer">Transfer Bank</option>
                       <option value="cash">Tunai</option>
@@ -430,7 +430,7 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
                       name="payment_reference"
                       value={formData.payment_reference}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                       placeholder="Contoh: TRF/2025/06/001"
                     />
                   </div>
@@ -461,7 +461,7 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
                       name="payment_period_start"
                       value={formData.payment_period_start}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                     />
                   </div>
                   <div>
@@ -473,7 +473,7 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
                       name="payment_period_end"
                       value={formData.payment_period_end}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -487,7 +487,7 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
                     value={formData.notes}
                     onChange={handleInputChange}
                     rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                     placeholder="Catatan tambahan tentang pembayaran ini..."
                   />
                 </div>
@@ -560,7 +560,7 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
             <div className="mt-6">
               <button
                 onClick={() => setShowHistory(!showHistory)}
-                className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors"
+                className="flex items-center space-x-2 text-tosca-600 hover:text-tosca-800 transition-colors"
               >
                 <Clock className="h-4 w-4" />
                 <span>{showHistory ? 'Sembunyikan Riwayat' : 'Lihat Riwayat Pembayaran'}</span>
@@ -583,7 +583,7 @@ const SalaryPaymentForm = ({ employee, onClose, onPaymentProcessed }) => {
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                             payment.payment_status === 'completed' ? 'bg-green-100 text-green-800' :
                             payment.payment_status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
-                            payment.payment_status === 'processing' ? 'bg-blue-100 text-blue-800' :
+                            payment.payment_status === 'processing' ? 'bg-tosca-100 text-tosca-800' :
                             'bg-red-100 text-red-800'
                           }`}>
                             {payment.payment_status === 'completed' ? 'Selesai' :

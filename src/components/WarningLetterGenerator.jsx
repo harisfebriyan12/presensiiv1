@@ -473,7 +473,7 @@ Tanda Tangan & Stempel
                 <select
                   value={reason}
                   onChange={(e) => setReason(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-2"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent mb-2"
                 >
                   <option value="">Pilih alasan...</option>
                   {commonReasons.map((r) => (
@@ -488,7 +488,7 @@ Tanda Tangan & Stempel
                     value={reason === 'custom' ? '' : reason}
                     onChange={(e) => setReason(e.target.value)}
                     placeholder="Masukkan alasan peringatan..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                   />
                 )}
               </div>
@@ -502,7 +502,7 @@ Tanda Tangan & Stempel
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                   placeholder="Jelaskan detail pelanggaran atau tindakan yang diharapkan..."
                 />
               </div>
@@ -616,7 +616,7 @@ Tanda Tangan & Stempel
                 
                 <button
                   onClick={downloadLetter}
-                  className="px-4 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                  className="px-4 py-3 bg-tosca-600 text-white rounded-lg font-medium hover:bg-tosca-700 transition-colors"
                 >
                   <div className="flex items-center space-x-2">
                     <Download className="h-4 w-4" />

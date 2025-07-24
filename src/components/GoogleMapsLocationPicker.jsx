@@ -327,7 +327,7 @@ const GoogleMapsLocationPicker = ({
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 placeholder="Masukkan alamat lengkap kantor"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -341,7 +341,7 @@ const GoogleMapsLocationPicker = ({
                   value={selectedLocation?.lat || ''}
                   onChange={(e) => setSelectedLocation(prev => ({ ...prev, lat: parseFloat(e.target.value) }))}
                   placeholder="-6.200000"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -354,7 +354,7 @@ const GoogleMapsLocationPicker = ({
                   value={selectedLocation?.lng || ''}
                   onChange={(e) => setSelectedLocation(prev => ({ ...prev, lng: parseFloat(e.target.value) }))}
                   placeholder="106.816666"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -385,7 +385,7 @@ const GoogleMapsLocationPicker = ({
           </button>
           <button
             onClick={retryLoadMaps}
-            className="px-4 py-3 border border-blue-300 text-blue-700 rounded-lg hover:bg-blue-50 transition-colors"
+            className="px-4 py-3 border border-tosca-300 text-tosca-700 rounded-lg hover:bg-tosca-50 transition-colors"
           >
             <div className="flex items-center justify-center space-x-2">
               <RefreshCw className="h-4 w-4" />
@@ -395,7 +395,7 @@ const GoogleMapsLocationPicker = ({
           <button
             onClick={handleSave}
             disabled={!selectedLocation || !address}
-            className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="flex-1 bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             <div className="flex items-center justify-center space-x-2">
               <Save className="h-4 w-4" />
@@ -419,14 +419,14 @@ const GoogleMapsLocationPicker = ({
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Cari alamat atau tempat..."
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
             disabled={isLoading || error}
           />
         </div>
         <button
           onClick={searchLocation}
           disabled={isLoading || error || !searchQuery.trim()}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-4 py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {isLoading ? <RefreshCw className="h-4 w-4 animate-spin" /> : 'Cari'}
         </button>
@@ -450,7 +450,7 @@ const GoogleMapsLocationPicker = ({
         {/* Loading Overlay */}
         {isLoading && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 rounded-lg">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-tosca-600 mb-4"></div>
             <p className="text-gray-600">Memuat Google Maps...</p>
           </div>
         )}
@@ -523,7 +523,7 @@ const GoogleMapsLocationPicker = ({
         <button
           onClick={handleSave}
           disabled={!selectedLocation || isLoading}
-          className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="flex-1 bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           <div className="flex items-center justify-center space-x-2">
             <Save className="h-4 w-4" />

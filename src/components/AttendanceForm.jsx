@@ -540,7 +540,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
             <div className="space-y-3">
               <button
                 onClick={() => window.location.href = '/profile'}
-                className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+                className="w-full bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 transition-colors flex items-center justify-center space-x-2"
               >
                 <Edit className="h-4 w-4" />
                 <span>Lengkapi Profil Sekarang</span>
@@ -554,12 +554,12 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
               </button>
             </div>
 
-            <div className="mt-6 p-3 bg-blue-50 rounded-lg text-left">
+            <div className="mt-6 p-3 bg-tosca-50 rounded-lg text-left">
               <div className="flex items-start space-x-2">
-                <Info className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <Info className="h-5 w-5 text-tosca-600 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-blue-700 font-medium">Informasi Penting</p>
-                  <p className="text-xs text-blue-600 mt-1">
+                  <p className="text-sm text-tosca-700 font-medium">Informasi Penting</p>
+                  <p className="text-xs text-tosca-600 mt-1">
                     Mode tanpa verifikasi wajah hanya dapat digunakan dengan persetujuan HRD dan memiliki batasan tertentu.
                   </p>
                 </div>
@@ -572,12 +572,12 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
 
     return (
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl w-full">
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-8 text-white">
+        <div className="bg-gradient-to-r from-tosca-600 to-tosca-700 px-6 py-8 text-white">
           <h2 className="text-2xl font-bold mb-2">Absensi Karyawan</h2>
           <p className="opacity-90">Memuat data verifikasi...</p>
         </div>
         <div className="p-8 text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-tosca-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Menyiapkan sistem verifikasi...</p>
         </div>
       </div>
@@ -587,7 +587,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
   return (
     <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-3xl w-full">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-8 text-white">
+      <div className="bg-gradient-to-r from-tosca-600 to-tosca-700 px-6 py-8 text-white">
         <div className="flex items-center space-x-4 mb-4">
           <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
             <User className="h-6 w-6" />
@@ -648,7 +648,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
                   <React.Fragment key={s.id}>
                     <div className="flex flex-col items-center">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center font-medium text-sm transition-colors ${
-                        step >= s.id ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'
+                        step >= s.id ? 'bg-tosca-600 text-white' : 'bg-gray-200 text-gray-600'
                       }`}>
                         {step > s.id ? <CheckCircle className="h-4 w-4" /> : s.id}
                       </div>
@@ -657,7 +657,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
                     {index < steps.length - 1 && (
                       <div className="flex-1 h-1 mx-2 bg-gray-200 relative">
                         <div className={`absolute top-0 left-0 h-full transition-all duration-300 ${
-                          step > s.id ? 'bg-blue-600' : 'bg-gray-200'
+                          step > s.id ? 'bg-tosca-600' : 'bg-gray-200'
                         }`} style={{ width: step > s.id ? '100%' : '0%' }}></div>
                       </div>
                     )}
@@ -673,14 +673,14 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
                 <React.Fragment key={s.id}>
                   <div className="flex flex-col items-center text-center w-28">
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center font-medium transition-colors duration-300 ${
-                      step >= s.id ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'
+                      step >= s.id ? 'bg-tosca-600 text-white' : 'bg-gray-200 text-gray-600'
                     }`}>
                       {step > s.id ? <CheckCircle className="h-5 w-5" /> : s.id}
                     </div>
-                    <p className={`mt-2 text-sm font-medium transition-colors duration-300 ${step >= s.id ? 'text-blue-700' : 'text-gray-500'}`}>{s.name}</p>
+                    <p className={`mt-2 text-sm font-medium transition-colors duration-300 ${step >= s.id ? 'text-tosca-700' : 'text-gray-500'}`}>{s.name}</p>
                   </div>
                   {index < steps.length - 1 && (
-                    <div className={`flex-1 h-1 mx-4 rounded-full transition-colors duration-300 ${step > s.id ? 'bg-blue-600' : 'bg-gray-200'}`}></div>
+                    <div className={`flex-1 h-1 mx-4 rounded-full transition-colors duration-300 ${step > s.id ? 'bg-tosca-600' : 'bg-gray-200'}`}></div>
                   )}
                 </React.Fragment>
               ))}
@@ -699,7 +699,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
               disabled={!canCheckIn}
               className={`p-3 md:p-4 rounded-lg border-2 transition-all flex flex-col items-center ${
                 attendanceType === 'masuk'
-                  ? 'border-blue-600 bg-blue-50 text-blue-700'
+                  ? 'border-tosca-600 bg-tosca-50 text-tosca-700'
                   : canCheckIn 
                     ? 'border-gray-200 hover:border-gray-300'
                     : 'border-gray-200 bg-gray-50 text-gray-400 cursor-not-allowed'
@@ -714,7 +714,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
               disabled={!canCheckOut}
               className={`p-3 md:p-4 rounded-lg border-2 transition-all flex flex-col items-center ${
                 attendanceType === 'keluar'
-                  ? 'border-blue-600 bg-blue-50 text-blue-700'
+                  ? 'border-tosca-600 bg-tosca-50 text-tosca-700'
                   : canCheckOut 
                     ? 'border-gray-200 hover:border-gray-300'
                     : 'border-gray-200 bg-gray-50 text-gray-400 cursor-not-allowed'
@@ -735,13 +735,13 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
         {step === 1 && (
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <MapPin className="h-5 w-5 text-blue-600" />
+              <MapPin className="h-5 w-5 text-tosca-600" />
               <h3 className="text-lg font-semibold">Verifikasi Lokasi</h3>
             </div>
             
             {officeLocation && (
-              <div className="mb-4 p-3 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-700">
+              <div className="mb-4 p-3 bg-tosca-50 rounded-lg">
+                <p className="text-sm text-tosca-700">
                   <strong>Lokasi Kantor:</strong> {officeLocation.name}<br/>
                   <strong>Alamat:</strong> {officeLocation.address}
                 </p>
@@ -764,16 +764,16 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
         {step === 2 && cameraVerificationEnabled && (
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Camera className="h-5 w-5 text-blue-600" />
+              <Camera className="h-5 w-5 text-tosca-600" />
               <h3 className="text-lg font-semibold">Verifikasi Wajah</h3>
             </div>
             
-            <div className="mb-4 p-3 bg-blue-50 rounded-lg">
+            <div className="mb-4 p-3 bg-tosca-50 rounded-lg">
               <div className="flex items-start space-x-2">
-                <Info className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <Info className="h-5 w-5 text-tosca-600 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-blue-700 font-medium">Tips Verifikasi Wajah</p>
-                  <ul className="text-xs text-blue-600 mt-1 list-disc list-inside space-y-1">
+                  <p className="text-sm text-tosca-700 font-medium">Tips Verifikasi Wajah</p>
+                  <ul className="text-xs text-tosca-600 mt-1 list-disc list-inside space-y-1">
                     <li>Pastikan pencahayaan cukup terang</li>
                     <li>Hadapkan wajah ke kamera secara lurus</li>
                     <li>Hindari bayangan pada wajah</li>
@@ -791,7 +791,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
             
             <button
               onClick={() => setStep(1)}
-              className="mt-4 text-sm text-blue-600 hover:text-blue-800 flex items-center"
+              className="mt-4 text-sm text-tosca-600 hover:text-tosca-800 flex items-center"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -804,7 +804,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
         {step === 3 && (
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <CheckCircle className="h-5 w-5 text-blue-600" /> 
+              <CheckCircle className="h-5 w-5 text-tosca-600" />
               <h3 className="text-lg font-semibold">Konfirmasi Absensi</h3>
             </div>
             
@@ -870,7 +870,7 @@ const AttendanceForm = ({ user, onAttendanceSubmitted, todayAttendance = [] }) =
               <button
                 onClick={submitAttendance}
                 disabled={isSubmitting}
-                className="flex-1 px-4 py-2 md:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm md:text-base flex items-center justify-center"
+                className="flex-1 px-4 py-2 md:py-3 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm md:text-base flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <>

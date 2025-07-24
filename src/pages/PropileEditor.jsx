@@ -175,28 +175,28 @@ const ProfileEditor = ({ user, profile, onClose }) => {
             <div className="flex space-x-4 px-6 py-4">
               <button
                 onClick={() => setActiveTab('face')}
-                className={`px-4 py-2 text-sm font-medium ${activeTab === 'face' ? 'border-b-2 border-blue-600 text-blue-600' : 'text-gray-600'}`}
+                className={`px-4 py-2 text-sm font-medium ${activeTab === 'face' ? 'border-b-2 border-tosca-600 text-tosca-600' : 'text-gray-600'}`}
               >
                 <Camera className="h-4 w-4 inline mr-2" />
                 Foto Wajah
               </button>
               <button
                 onClick={() => setActiveTab('profile')}
-                className={`px-4 py-2 text-sm font-medium ${activeTab === 'profile' ? 'border-b-2 border-blue-600 text-blue-600' : 'text-gray-600'}`}
+                className={`px-4 py-2 text-sm font-medium ${activeTab === 'profile' ? 'border-b-2 border-tosca-600 text-tosca-600' : 'text-gray-600'}`}
               >
                 <User className="h-4 w-4 inline mr-2" />
                 Profil
               </button>
               <button
                 onClick={() => setActiveTab('bank')}
-                className={`px-4 py-2 text-sm font-medium ${activeTab === 'bank' ? 'border-b-2 border-blue-600 text-blue-600' : 'text-gray-600'}`}
+                className={`px-4 py-2 text-sm font-medium ${activeTab === 'bank' ? 'border-b-2 border-tosca-600 text-tosca-600' : 'text-gray-600'}`}
               >
                 <CreditCard className="h-4 w-4 inline mr-2" />
                 Bank
               </button>
               <button
                 onClick={() => setActiveTab('password')}
-                className={`px-4 py-2 text-sm font-medium ${activeTab === 'password' ? 'border-b-2 border-blue-600 text-blue-600' : 'text-gray-600'}`}
+                className={`px-4 py-2 text-sm font-medium ${activeTab === 'password' ? 'border-b-2 border-tosca-600 text-tosca-600' : 'text-gray-600'}`}
               >
                 <Lock className="h-4 w-4 inline mr-2" />
                 Kata Sandi
@@ -240,12 +240,12 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                   type="file"
                   accept="image/*"
                   onChange={handleFaceCapture}
-                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-tosca-50 file:text-tosca-700 hover:file:bg-tosca-100"
                   disabled={isSubmitting}
                 />
                 <button
                   onClick={handleSaveFace}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400"
+                  className="w-full bg-tosca-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-tosca-700 transition-colors disabled:bg-gray-400"
                   disabled={isSubmitting || !facePhoto}
                 >
                   {isSubmitting ? 'Menyimpan...' : 'Simpan Foto Wajah'}
@@ -261,7 +261,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                     type="text"
                     value={profileData.full_name}
                     onChange={(e) => setProfileData({ ...profileData, full_name: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                   />
                 </div>
                 <div>
@@ -270,7 +270,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                     type="tel"
                     value={profileData.phone}
                     onChange={(e) => setProfileData({ ...profileData, phone: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                   />
                 </div>
                 <div>
@@ -279,7 +279,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                     type="text"
                     value={profileData.location}
                     onChange={(e) => setProfileData({ ...profileData, location: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                   />
                 </div>
                 <div>
@@ -287,13 +287,13 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                   <textarea
                     value={profileData.bio}
                     onChange={(e) => setProfileData({ ...profileData, bio: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                     rows="4"
                   />
                 </div>
                 <button
                   onClick={handleSaveProfile}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400"
+                  className="w-full bg-tosca-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-tosca-700 transition-colors disabled:bg-gray-400"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Menyimpan...' : 'Simpan Profil'}
@@ -308,7 +308,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                   <select
                     value={bankData.bank_id}
                     onChange={(e) => setBankData({ ...bankData, bank_id: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                   >
                     <option value="">Pilih Bank</option>
                     {banks.map((bank) => (
@@ -322,7 +322,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                     type="text"
                     value={bankData.bank_account_number}
                     onChange={(e) => setBankData({ ...bankData, bank_account_number: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                   />
                 </div>
                 <div>
@@ -331,12 +331,12 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                     type="text"
                     value={bankData.bank_account_name}
                     onChange={(e) => setBankData({ ...bankData, bank_account_name: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                   />
                 </div>
                 <button
                   onClick={handleSaveBank}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400"
+                  className="w-full bg-tosca-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-tosca-700 transition-colors disabled:bg-gray-400"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Menyimpan...' : 'Simpan Informasi Bank'}
@@ -352,7 +352,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                     type="password"
                     value={passwordData.newPassword}
                     onChange={(e) => setPasswordData({ ...passwordData, newPassword: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                   />
                 </div>
                 <div>
@@ -361,12 +361,12 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                     type="password"
                     value={passwordData.confirmPassword}
                     onChange={(e) => setPasswordData({ ...passwordData, confirmPassword: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-tosca-300 focus:ring focus:ring-tosca-200 focus:ring-opacity-50"
                   />
                 </div>
                 <button
                   onClick={handleChangePassword}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400"
+                  className="w-full bg-tosca-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-tosca-700 transition-colors disabled:bg-gray-400"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Menyimpan...' : 'Ubah Kata Sandi'}

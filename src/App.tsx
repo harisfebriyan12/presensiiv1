@@ -28,104 +28,17 @@ function App() {
   );
 }
 
+import ProtectedRoute from './components/ProtectedRoute';
+import { useAuth } from './hooks/useAuth';
+
 function AppContent() {
-  const [session, setSession] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [userRole, setUserRole] = useState(null);
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Dapatkan session awal dengan error handling
-    supabase.auth.getSession().then(({ data: { session }, error }) => {
-      if (error) {
-        // Jika ada error (seperti user_not_found), clear session
-        console.error('Session error:', error);
-        supabase.auth.signOut();
-        setSession(null);
-      } else {
-        setSession(session);
-        
-        // Fetch user role if session exists
-        if (session) {
-          fetchUserRole(session.user.id);
-        }
-      }
-      setLoading(false);
-    }).catch((error) => {
-      // Handle any unexpected errors
-      console.error('Unexpected session error:', error);
-      supabase.auth.signOut();
-      setSession(null);
-      setLoading(false);
-    });
-
-    // Dengarkan perubahan auth
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-      
-      // Fetch user role when session changes
-      if (session) {
-        fetchUserRole(session.user.id);
-      } else {
-        setUserRole(null);
-      }
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  // Handle 404s by redirecting to home page
-  useEffect(() => {
-    // Check if the current path doesn't match any of our routes
-    const validPaths = [
-      '/login', '/register', '/dashboard', '/profile-setup', 
-      '/history', '/admin', '/admin/users', '/admin/departments', 
-      '/admin/positions', '/admin/salary-payment', '/admin/location', 
-      '/admin/bank', '/admin/attendance', '/'
-    ];
-    
-    const isValidPath = validPaths.some(path => {
-      // Check if current path starts with this valid path
-      return location.pathname === path || 
-             (path !== '/' && location.pathname.startsWith(path + '/'));
-    });
-    
-    if (!isValidPath && !loading) {
-      // Redirect to appropriate page based on user role
-      if (!session) {
-        navigate('/login');
-      } else if (userRole === 'admin') {
-        navigate('/admin');
-      } else {
-        navigate('/dashboard');
-      }
-    }
-  }, [location.pathname, loading, session, userRole, navigate]);
-
-  const fetchUserRole = async (userId) => {
-    try {
-      const { data, error } = await supabase
-        .from('profiles')
-        .select('role')
-        .eq('id', userId)
-        .single();
-      
-      if (error) throw error;
-      setUserRole(data.role);
-    } catch (error) {
-      console.error('Error fetching user role:', error);
-      setUserRole(null);
-    }
-  };
+  const { session, userRole, loading } = useAuth();
 
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -149,47 +62,47 @@ function AppContent() {
         />
         <Route 
           path="/dashboard" 
-          element={session ? (userRole === 'admin' ? <Navigate to="/admin" replace /> : <Dashboard />) : <Navigate to="/login" replace />} 
+          element={<ProtectedRoute><Dashboard /></ProtectedRoute>}
         />
         <Route 
           path="/profile-setup" 
-          element={session ? <ProfileSetup /> : <Navigate to="/login" replace />} 
+          element={<ProtectedRoute><ProfileSetup /></ProtectedRoute>}
         />
         <Route 
           path="/history" 
-          element={session ? <AttendanceHistory /> : <Navigate to="/login" replace />} 
+          element={<ProtectedRoute><AttendanceHistory /></ProtectedRoute>}
         />
         <Route 
           path="/admin" 
-          element={session && userRole === 'admin' ? <AdminPanel /> : <Navigate to={session ? "/dashboard" : "/login"} replace />} 
+          element={<ProtectedRoute adminOnly={true}><AdminPanel /></ProtectedRoute>}
         />
         <Route 
           path="/admin/users" 
-          element={session && userRole === 'admin' ? <UserManagement /> : <Navigate to={session ? "/dashboard" : "/login"} replace />} 
+          element={<ProtectedRoute adminOnly={true}><UserManagement /></ProtectedRoute>}
         />
         <Route 
           path="/admin/departments" 
-          element={session && userRole === 'admin' ? <DepartmentManagement /> : <Navigate to={session ? "/dashboard" : "/login"} replace />} 
+          element={<ProtectedRoute adminOnly={true}><DepartmentManagement /></ProtectedRoute>}
         />
         <Route 
           path="/admin/positions" 
-          element={session && userRole === 'admin' ? <PositionManagement /> : <Navigate to={session ? "/dashboard" : "/login"} replace />} 
+          element={<ProtectedRoute adminOnly={true}><PositionManagement /></ProtectedRoute>}
         />
         <Route 
           path="/admin/salary-payment" 
-          element={session && userRole === 'admin' ? <SalaryPaymentManagement /> : <Navigate to={session ? "/dashboard" : "/login"} replace />} 
+          element={<ProtectedRoute adminOnly={true}><SalaryPaymentManagement /></ProtectedRoute>}
         />
         <Route 
           path="/admin/location" 
-          element={session && userRole === 'admin' ? <LocationSettings /> : <Navigate to={session ? "/dashboard" : "/login"} replace />} 
+          element={<ProtectedRoute adminOnly={true}><LocationSettings /></ProtectedRoute>}
         />
         <Route 
           path="/admin/bank" 
-          element={session && userRole === 'admin' ? <BankManagement /> : <Navigate to={session ? "/dashboard" : "/login"} replace />} 
+          element={<ProtectedRoute adminOnly={true}><BankManagement /></ProtectedRoute>}
         />
         <Route 
           path="/admin/attendance" 
-          element={session && userRole === 'admin' ? <AttendanceManagementByDate /> : <Navigate to={session ? "/dashboard" : "/login"} replace />} 
+          element={<ProtectedRoute adminOnly={true}><AttendanceManagementByDate /></ProtectedRoute>}
         />
         <Route 
           path="/" 
@@ -202,11 +115,7 @@ function AppContent() {
         {/* Catch-all route to handle 404s */}
         <Route 
           path="*" 
-          element={
-            !session ? <Navigate to="/login" replace /> : 
-            userRole === 'admin' ? <Navigate to="/admin" replace /> : 
-            <Navigate to="/dashboard" replace />
-          } 
+          element={<Navigate to="/" replace />}
         />
       </Routes>
     </div>
