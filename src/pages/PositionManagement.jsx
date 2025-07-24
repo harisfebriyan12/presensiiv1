@@ -298,7 +298,7 @@ const PositionManagement = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -328,7 +328,7 @@ const PositionManagement = () => {
               </div>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 transition-colors"
               >
                 <Plus className="h-4 w-4" />
                 <span>Tambah Jabatan</span>
@@ -369,8 +369,8 @@ const PositionManagement = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Briefcase className="h-6 w-6 text-blue-600" />
+                <div className="w-12 h-12 bg-tosca-100 rounded-full flex items-center justify-center">
+                  <Briefcase className="h-6 w-6 text-tosca-600" />
                 </div>
                 <div className="ml-4">
                   <p className="text-sm font-medium text-gray-600">Total Jabatan</p>
@@ -423,7 +423,7 @@ const PositionManagement = () => {
                       placeholder="Cari jabatan atau departemen..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -431,7 +431,7 @@ const PositionManagement = () => {
                   <select
                     value={filterDepartment}
                     onChange={(e) => setFilterDepartment(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                   >
                     <option value="">Semua Departemen</option>
                     {departments.map(dept => (
@@ -447,7 +447,7 @@ const PositionManagement = () => {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="px-6 py-4 border-b border-gray-200">
               <div className="flex items-center space-x-2">
-                <Briefcase className="h-5 w-5 text-blue-600" />
+                <Briefcase className="h-5 w-5 text-tosca-600" />
                 <h2 className="text-lg font-medium text-gray-900">
                   Daftar Jabatan ({filteredPositions.length})
                 </h2>
@@ -456,7 +456,7 @@ const PositionManagement = () => {
             
             {contentLoading || filteredPositions.length === 0 ? (
               <div className="flex items-center justify-center py-12">
-                <div className="inline-flex space-x-1 text-blue-600">
+                <div className="inline-flex space-x-1 text-tosca-600">
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -506,7 +506,7 @@ const PositionManagement = () => {
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-tosca-100 text-tosca-800">
                             {position.department || 'Tidak ada'}
                           </span>
                         </td>
@@ -533,7 +533,7 @@ const PositionManagement = () => {
                           <div className="flex space-x-2">
                             <button
                               onClick={() => handleEdit(position)}
-                              className="text-blue-600 hover:text-blue-900 p-1 hover:bg-blue-50 rounded"
+                              className="text-tosca-600 hover:text-tosca-900 p-1 hover:bg-tosca-50 rounded"
                               title="Edit Jabatan"
                             >
                               <Edit className="h-4 w-4" />
@@ -556,8 +556,8 @@ const PositionManagement = () => {
                   {filteredPositions.map((position) => (
                     <div key={position.id} className="bg-white rounded-lg shadow-md p-4 mb-4">
                       <div className="flex items-center space-x-4">
-                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                          <Briefcase className="h-5 w-5 text-blue-600" />
+                        <div className="w-10 h-10 bg-tosca-100 rounded-full flex items-center justify-center">
+                          <Briefcase className="h-5 w-5 text-tosca-600" />
                         </div>
                         <div>
                           <p className="text-sm font-medium text-gray-900">
@@ -584,7 +584,7 @@ const PositionManagement = () => {
                       <div className="mt-2 flex justify-end">
                         <button
                           onClick={() => handleEdit(position)}
-                          className="text-blue-600 hover:text-blue-900 p-2 rounded hover:bg-blue-50"
+                          className="text-tosca-600 hover:text-tosca-900 p-2 rounded hover:bg-tosca-50"
                         >
                           <Edit className="h-5 w-5" />
                         </button>
@@ -645,7 +645,7 @@ const PositionManagement = () => {
                         value={formData.name_id}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: Manager IT"
                       />
                     </div>
@@ -659,7 +659,7 @@ const PositionManagement = () => {
                         value={formData.name_en}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Example: IT Manager"
                       />
                     </div>
@@ -674,7 +674,7 @@ const PositionManagement = () => {
                       value={formData.department}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                     >
                       <option value="">Pilih Departemen...</option>
                       {departments.map(dept => (
@@ -685,7 +685,7 @@ const PositionManagement = () => {
                 </div>
 
                 {/* Descriptions */}
-                <div className="bg-blue-50 p-4 rounded-lg">
+                <div className="bg-tosca-50 p-4 rounded-lg">
                   <h3 className="font-medium text-gray-900 mb-4">Deskripsi Jabatan</h3>
                   <div className="space-y-4">
                     <div>
@@ -697,7 +697,7 @@ const PositionManagement = () => {
                         value={formData.description_id}
                         onChange={handleInputChange}
                         rows={3}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Deskripsi tugas dan tanggung jawab..."
                       />
                     </div>
@@ -710,7 +710,7 @@ const PositionManagement = () => {
                         value={formData.description_en}
                         onChange={handleInputChange}
                         rows={3}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Job description and responsibilities..."
                       />
                     </div>
@@ -731,7 +731,7 @@ const PositionManagement = () => {
                         value={formData.base_salary}
                         onChange={handleInputChange}
                         min="0"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="5000000"
                       />
                     </div>
@@ -745,7 +745,7 @@ const PositionManagement = () => {
                         value={formData.min_salary}
                         onChange={handleInputChange}
                         min="0"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="4000000"
                       />
                     </div>
@@ -759,7 +759,7 @@ const PositionManagement = () => {
                         value={formData.max_salary}
                         onChange={handleInputChange}
                         min="0"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="8000000"
                       />
                     </div>
@@ -779,7 +779,7 @@ const PositionManagement = () => {
                     name="is_active"
                     checked={formData.is_active}
                     onChange={handleInputChange}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-tosca-600 focus:ring-tosca-500 border-gray-300 rounded"
                   />
                   <label className="ml-2 block text-sm text-gray-900">
                     Jabatan aktif (dapat dipilih saat menambah karyawan)
@@ -798,7 +798,7 @@ const PositionManagement = () => {
                   <button
                     type="submit"
                     disabled={contentLoading}
-                    className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="flex-1 bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     <div className="flex items-center justify-center space-x-2">
                       <Save className="h-4 w-4" />

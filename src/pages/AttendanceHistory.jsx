@@ -307,7 +307,7 @@ const AttendanceHistory = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -321,7 +321,7 @@ const AttendanceHistory = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 shadow-sm border-b">
+      <div className="bg-gradient-to-r from-tosca-600 to-tosca-700 shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-4">
@@ -333,7 +333,7 @@ const AttendanceHistory = () => {
               </button>
               <div>
                 <h1 className="text-2xl font-bold text-white">Laporan Absensi</h1>
-                <p className="text-sm text-blue-100">
+                <p className="text-sm text-tosca-100">
                   {userRole === 'admin' 
                     ? 'Lihat dan export laporan absensi semua karyawan' 
                     : 'Lihat dan export riwayat absensi Anda'}
@@ -352,7 +352,7 @@ const AttendanceHistory = () => {
               <button
                 onClick={exportToCsv}
                 disabled={filteredData.length === 0}
-                className="flex items-center space-x-2 px-4 py-2 bg-white text-blue-700 rounded-lg hover:bg-white/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 bg-white text-tosca-700 rounded-lg hover:bg-white/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 <Download className="h-4 w-4" />
                 <span>Export CSV</span>
@@ -367,7 +367,7 @@ const AttendanceHistory = () => {
         <div className="bg-white rounded-lg shadow-md mb-6">
           <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200">
             <div className="flex items-center space-x-2">
-              <Filter className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
+              <Filter className="h-4 w-4 sm:h-5 sm:w-5 text-tosca-600" />
               <h2 className="text-base sm:text-lg font-medium text-gray-900">Filter Laporan</h2>
             </div>
           </div>
@@ -380,7 +380,7 @@ const AttendanceHistory = () => {
                   name="type"
                   value={filters.type}
                   onChange={handleFilterChange}
-                  className="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:ring-1 focus:ring-tosca-500 focus:border-transparent"
                 >
                   <option value="">Semua</option>
                   <option value="masuk">Masuk</option>
@@ -393,7 +393,7 @@ const AttendanceHistory = () => {
                   name="status"
                   value={filters.status}
                   onChange={handleFilterChange}
-                  className="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:ring-1 focus:ring-tosca-500 focus:border-transparent"
                 >
                   <option value="">Semua</option>
                   <option value="berhasil">Berhasil</option>
@@ -408,7 +408,7 @@ const AttendanceHistory = () => {
                   name="startDate"
                   value={filters.startDate}
                   onChange={handleFilterChange}
-                  className="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:ring-1 focus:ring-tosca-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -418,7 +418,7 @@ const AttendanceHistory = () => {
                   name="endDate"
                   value={filters.endDate}
                   onChange={handleFilterChange}
-                  className="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md focus:ring-1 focus:ring-tosca-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -434,7 +434,7 @@ const AttendanceHistory = () => {
                     <select
                       value={selectedEmployee}
                       onChange={handleEmployeeChange}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                     >
                       <option value="all">Semua Karyawan</option>
                       {employees.map((employee) => (
@@ -453,7 +453,7 @@ const AttendanceHistory = () => {
                   name="startDate"
                   value={filters.startDate}
                   onChange={handleFilterChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -463,7 +463,7 @@ const AttendanceHistory = () => {
                   name="endDate"
                   value={filters.endDate}
                   onChange={handleFilterChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -472,7 +472,7 @@ const AttendanceHistory = () => {
                   name="type"
                   value={filters.type}
                   onChange={handleFilterChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 >
                   <option value="">Semua Jenis</option>
                   <option value="masuk">Masuk</option>
@@ -485,7 +485,7 @@ const AttendanceHistory = () => {
                   name="status"
                   value={filters.status}
                   onChange={handleFilterChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                 >
                   <option value="">Semua Status</option>
                   <option value="berhasil">Berhasil</option>
@@ -514,7 +514,7 @@ const AttendanceHistory = () => {
           <div className="px-6 py-4 border-b border-gray-200">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <Calendar className="h-5 w-5 text-blue-600" />
+                <Calendar className="h-5 w-5 text-tosca-600" />
                 <h2 className="text-lg font-medium text-gray-900">
                   Data Absensi ({filteredData.length})
                 </h2>
@@ -538,7 +538,7 @@ const AttendanceHistory = () => {
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center space-x-2">
                           <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
-                            record.type === 'masuk' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                            record.type === 'masuk' ? 'bg-green-100 text-green-800' : 'bg-tosca-100 text-tosca-800'
                           }`}>
                             {record.type === 'masuk' ? 'Masuk' : 'Keluar'}
                           </span>
@@ -610,7 +610,7 @@ const AttendanceHistory = () => {
                     {filteredData.map((record) => {
                       const dateTime = formatDateTime(record.timestamp);
                       return (
-                        <tr key={record.id} className="hover:bg-blue-50 cursor-pointer transition" onClick={() => setSelectedRecord(record)}>
+                        <tr key={record.id} className="hover:bg-tosca-50 cursor-pointer transition" onClick={() => setSelectedRecord(record)}>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div>
                               <div className="text-sm font-medium text-gray-900">
@@ -634,7 +634,7 @@ const AttendanceHistory = () => {
                             </td>
                           )}
                           <td className="px-6 py-4 whitespace-nowrap">
-                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 capitalize">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-tosca-100 text-tosca-800 capitalize">
                               {record.type === 'masuk' ? 'Masuk' : 'Keluar'}
                             </span>
                           </td>
@@ -664,7 +664,7 @@ const AttendanceHistory = () => {
                               )}
                             </div>
                             {record.overtime_hours > 0 && (
-                              <div className="text-xs text-blue-600">
+                              <div className="text-xs text-tosca-600">
                                 Lembur: {record.overtime_hours} jam
                               </div>
                             )}

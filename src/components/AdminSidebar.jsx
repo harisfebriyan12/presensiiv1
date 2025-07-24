@@ -133,14 +133,14 @@ const AdminSidebar = ({ user, profile, isCollapsed, setIsCollapsed }) => {
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between h-16 bg-gradient-to-r from-blue-700 to-indigo-600 text-white px-4">
+          <div className="flex items-center justify-between h-16 bg-gradient-to-r from-tosca-700 to-tosca-600 text-white px-4">
             <div className="flex items-center">
               <Building className="h-7 w-7 flex-shrink-0" />
               {!isCollapsed && <span className="ml-2 text-lg font-semibold tracking-tight">Admin Panel</span>}
             </div>
             <button
               onClick={() => setIsCollapsed(!isCollapsed)}
-              className="hidden lg:block p-1 rounded-full hover:bg-blue-800 transition-colors"
+              className="hidden lg:block p-1 rounded-full hover:bg-tosca-800 transition-colors"
             >
               <ChevronLeft className={`h-5 w-5 transform transition-transform ${isCollapsed ? 'rotate-180' : ''}`} />
             </button>
@@ -148,7 +148,7 @@ const AdminSidebar = ({ user, profile, isCollapsed, setIsCollapsed }) => {
 
           {/* User info */}
           <div className={`flex items-center ${isCollapsed ? 'justify-center py-3' : 'px-4 py-4'} border-b border-gray-200 bg-gray-50/50`}>
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 bg-tosca-100 rounded-full flex items-center justify-center overflow-hidden">
               {profile?.avatar_url ? (
                 <img 
                   src={profile.avatar_url} 
@@ -156,7 +156,7 @@ const AdminSidebar = ({ user, profile, isCollapsed, setIsCollapsed }) => {
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <Users className="h-6 w-6 text-blue-600" />
+                <Users className="h-6 w-6 text-tosca-600" />
               )}
             </div>
             {!isCollapsed && (
@@ -197,10 +197,10 @@ const AdminSidebar = ({ user, profile, isCollapsed, setIsCollapsed }) => {
                                 }}
                                 className={`w-full flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200
                                   ${subItem.active 
-                                    ? 'text-blue-600 bg-blue-50 font-semibold' 
+                                    ? 'text-tosca-600 bg-tosca-50 font-semibold'
                                     : 'text-gray-600 hover:bg-gray-100'}`}
                               >
-                                <span className={`${subItem.active ? 'text-blue-600' : 'text-gray-400'}`}>
+                                <span className={`${subItem.active ? 'text-tosca-600' : 'text-gray-400'}`}>
                                   {subItem.icon}
                                 </span>
                                 <span className="ml-3">{subItem.title}</span>
@@ -218,10 +218,10 @@ const AdminSidebar = ({ user, profile, isCollapsed, setIsCollapsed }) => {
                       }}
                       className={`w-full flex items-center ${isCollapsed ? 'justify-center' : 'justify-start px-3'} py-2.5 text-sm font-medium rounded-lg transition-colors duration-200
                         ${item.active 
-                          ? 'text-blue-600 bg-blue-50 font-semibold' 
+                          ? 'text-tosca-600 bg-tosca-50 font-semibold'
                           : 'text-gray-700 hover:bg-gray-100'}`}
                     >
-                      <span className={`${item.active ? 'text-blue-600' : 'text-gray-500'}`}>
+                      <span className={`${item.active ? 'text-tosca-600' : 'text-gray-500'}`}>
                         {item.icon}
                       </span>
                       {!isCollapsed && <span className="ml-3">{item.title}</span>}

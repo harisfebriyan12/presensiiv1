@@ -293,22 +293,22 @@ const Register = () => {
       case 'admin':
         return 'border-purple-300 bg-purple-50 text-purple-700';
       case 'kepala':
-        return 'border-blue-300 bg-blue-50 text-blue-700';
+        return 'border-tosca-300 bg-tosca-50 text-tosca-700';
       default:
         return 'border-green-300 bg-green-50 text-green-700';
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-indigo-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-tosca-600 to-tosca-800 flex items-center justify-center p-4">
       <div className="max-w-md w-full">
         {/* Logo and Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full mb-6 shadow-lg">
-            <Building2 className="h-10 w-10 text-blue-600" />
+            <Building2 className="h-10 w-10 text-tosca-600" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Portal Karyawan</h1>
-          <p className="text-blue-100">
+          <p className="text-tosca-100">
             {formData.role === 'admin' 
               ? 'Buat akun Administrator tanpa verifikasi wajah'
               : 'Buat akun dengan verifikasi wajah'
@@ -325,14 +325,14 @@ const Register = () => {
                 <div key={stepNum} className="flex items-center">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                     step >= stepNum
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-tosca-600 text-white'
                       : 'bg-gray-200 text-gray-600'
                   }`}>
                     {stepNum < step ? <CheckCircle className="h-4 w-4" /> : stepNum}
                   </div>
                   {stepNum < 2 && (
                     <div className={`w-12 h-1 mx-2 ${
-                      step > stepNum ? 'bg-blue-600' : 'bg-gray-200'
+                      step > stepNum ? 'bg-tosca-600' : 'bg-gray-200'
                     }`} />
                   )}
                 </div>
@@ -341,7 +341,7 @@ const Register = () => {
           )}
 
           <div className="flex items-center space-x-2 mb-6">
-            <UserPlus className="h-5 w-5 text-blue-600" />
+            <UserPlus className="h-5 w-5 text-tosca-600" />
             <h2 className="text-xl font-semibold text-gray-900">
               {step === 1 ? 'Informasi Dasar' : 'Verifikasi Wajah'}
             </h2>
@@ -372,7 +372,7 @@ const Register = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent transition-colors"
                     placeholder="Masukkan nama lengkap Anda"
                   />
                 </div>
@@ -391,7 +391,7 @@ const Register = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent transition-colors"
                     placeholder="Masukkan email Anda"
                   />
                 </div>
@@ -448,7 +448,7 @@ const Register = () => {
                     value={formData.password}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent transition-colors"
                     placeholder="Masukkan password Anda"
                   />
                 </div>
@@ -467,7 +467,7 @@ const Register = () => {
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent transition-colors"
                     placeholder="Konfirmasi password Anda"
                   />
                 </div>
@@ -520,7 +520,7 @@ const Register = () => {
               <button
                 type="submit"
                 disabled={isLoading || !isSupabaseConfigured() || !captchaToken}
-                className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                className="w-full bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 focus:ring-2 focus:ring-tosca-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center space-x-2">
@@ -535,7 +535,7 @@ const Register = () => {
           ) : (
             <div className="space-y-6">
               <div className="text-center mb-6">
-                <Camera className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+                <Camera className="h-12 w-12 text-tosca-600 mx-auto mb-3" />
                 <p className="text-gray-600">
                   Ambil foto wajah yang jelas untuk verifikasi absensi. 
                   Sistem kami menggunakan teknologi pengenalan wajah yang aman dan cepat.
@@ -563,7 +563,7 @@ const Register = () => {
                 <button
                   onClick={handleRegistration}
                   disabled={!facePhoto || isLoading}
-                  className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="flex-1 bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center space-x-2">
@@ -584,7 +584,7 @@ const Register = () => {
                 Sudah punya akun?{' '}
                 <Link
                   to="/login"
-                  className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                  className="text-tosca-600 hover:text-tosca-700 font-medium transition-colors"
                 >
                   Masuk di sini
                 </Link>
@@ -596,7 +596,7 @@ const Register = () => {
         {/* Security Info */}
         <div className="mt-6 p-4 bg-white/20 backdrop-blur-sm rounded-lg text-white">
           <p className="text-sm font-medium mb-2">
-            <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs mr-2">INFO</span>
+            <span className="bg-tosca-500 text-white px-2 py-1 rounded text-xs mr-2">INFO</span>
             Sistem Verifikasi Berdasarkan Role
           </p>
           <div className="text-xs space-y-1">

@@ -100,7 +100,7 @@ const NotificationSystem = ({ userId, userRole }) => {
       case 'salary_info':
         return <CheckCircle className="h-5 w-5 text-green-500" />;
       case 'system_alert':
-        return <FileText className="h-5 w-5 text-blue-500" />;
+        return <FileText className="h-5 w-5 text-tosca-500" />;
       case 'general':
         return <User className="h-5 w-5 text-gray-500" />;
       default:
@@ -117,7 +117,7 @@ const NotificationSystem = ({ userId, userRole }) => {
       case 'salary_info':
         return 'border-l-green-400 bg-green-50';
       case 'system_alert':
-        return 'border-l-blue-400 bg-blue-50';
+        return 'border-l-tosca-400 bg-tosca-50';
       case 'general':
         return 'border-l-gray-400 bg-gray-50';
       default:
@@ -171,9 +171,9 @@ const NotificationSystem = ({ userId, userRole }) => {
           
           <div className="fixed md:absolute right-0 mt-2 w-full md:w-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 max-h-[80vh] md:max-h-96 overflow-hidden md:top-auto bottom-0 md:bottom-auto">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-blue-100">
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-tosca-50 to-tosca-100">
               <div className="flex items-center space-x-2">
-                <Bell className="h-5 w-5 text-blue-600" />
+                <Bell className="h-5 w-5 text-tosca-600" />
                 <h3 className="text-lg font-semibold text-gray-900">Notifikasi</h3>
                 {unreadCount > 0 && (
                   <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
@@ -185,7 +185,7 @@ const NotificationSystem = ({ userId, userRole }) => {
                 {unreadCount > 0 && (
                   <button
                     onClick={markAllAsRead}
-                    className="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                    className="text-sm text-tosca-600 hover:text-tosca-800 font-medium transition-colors"
                   >
                     Tandai semua dibaca
                   </button>
@@ -222,7 +222,7 @@ const NotificationSystem = ({ userId, userRole }) => {
                             {notification.title}
                           </p>
                           {!notification.is_read && (
-                            <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                            <div className="w-2 h-2 bg-tosca-500 rounded-full animate-pulse"></div>
                           )}
                         </div>
                         <p className="text-sm text-gray-600 mb-2 line-clamp-2">
@@ -257,7 +257,7 @@ const NotificationSystem = ({ userId, userRole }) => {
             {/* Footer */}
             {notifications.length > 0 && (
               <div className="p-3 border-t border-gray-200 bg-gray-50 text-center">
-                <button className="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                <button className="text-sm text-tosca-600 hover:text-tosca-800 font-medium transition-colors">
                   Lihat semua notifikasi
                 </button>
               </div>

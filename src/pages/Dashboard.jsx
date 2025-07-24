@@ -444,7 +444,7 @@ const Dashboard = () => {
     } else if (hasCheckOut) {
       return <div className="w-2 h-2 bg-blue-500 rounded-full mx-auto mt-1"></div>;
     } else if (date < new Date() && !isToday(date)) {
-      return <div className="w-2 h-2 bg-red-500 rounded-full mx-auto mt-1"></div>;
+      return <div className="w-2 h-2 bg-tosca-500 rounded-full mx-auto mt-1"></div>;
     }
     return null;
   };
@@ -520,7 +520,7 @@ const Dashboard = () => {
     return (
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -538,7 +538,7 @@ const Dashboard = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-3">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+              <div className="w-10 h-10 bg-gradient-to-br from-tosca-600 to-tosca-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
                 <User className="h-5 w-5 text-white" />
               </div>
               <div className="overflow-hidden">
@@ -656,14 +656,14 @@ const Dashboard = () => {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-          <StatCardMini icon={Calendar} title="Hadir" value={`${stats.thisMonth} hari`} color="blue" />
+          <StatCardMini icon={Calendar} title="Hadir" value={`${stats.thisMonth} hari`} color="tosca" />
           <StatCardMini icon={CheckCircle} title="Tepat Waktu" value={stats.onTime} color="green" />
           <StatCardMini icon={AlertTriangle} title="Terlambat" value={stats.late} color="orange" />
-          <StatCardMini icon={DollarSign} title="Jam Kerja" value={`${stats.totalHours} jam`} color="blue" />
+          <StatCardMini icon={DollarSign} title="Jam Kerja" value={`${stats.totalHours} jam`} color="tosca" />
         </div>
 
         {/* Bank Info Card */}
-        <div className="mb-4 bg-gradient-to-br from-indigo-600 to-blue-600 text-white rounded-lg shadow-md p-4 transform hover:scale-[1.01] transition-all duration-200">
+        <div className="mb-4 bg-gradient-to-br from-tosca-600 to-tosca-600 text-white rounded-lg shadow-md p-4 transform hover:scale-[1.01] transition-all duration-200">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="bg-white bg-opacity-20 p-2 rounded-full">
@@ -694,12 +694,12 @@ const Dashboard = () => {
         <div className="bg-white rounded-lg shadow-md p-3 sm:p-4 mb-4 border border-gray-100">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-2">
-              <Clock className="h-4 w-4 text-blue-600" />
+              <Clock className="h-4 w-4 text-tosca-600" />
               <h2 className="text-sm sm:text-base font-semibold text-gray-900">Absensi Hari Ini</h2>
             </div>
             <button
               onClick={() => setShowCalendar(!showCalendar)}
-              className="text-[0.65rem] sm:text-xs text-blue-600 hover:text-blue-800 font-medium hidden sm:block"
+              className="text-[0.65rem] sm:text-xs text-tosca-600 hover:text-tosca-800 font-medium hidden sm:block"
             >
               {showCalendar ? 'Sembunyikan Kalender' : 'Tampilkan Kalender'}
             </button>
@@ -751,7 +751,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   )}
-                  <div className="mt-2 sm:mt-3 p-2 bg-blue-50 rounded-lg shadow-sm">
+                  <div className="mt-2 sm:mt-3 p-2 bg-tosca-50 rounded-lg shadow-sm">
                     <div className="text-[0.65rem] sm:text-xs grid grid-cols-2 gap-2">
                       <div className="flex items-center justify-between">
                         <span>Masuk:</span>
@@ -773,7 +773,7 @@ const Dashboard = () => {
             {canAttend && (
               <button
                 onClick={handleAttendanceClick}
-                className="w-full mt-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-[1.02] shadow-sm"
+                className="w-full mt-3 bg-gradient-to-r from-tosca-600 to-tosca-600 text-white py-2 px-4 rounded-lg font-medium hover:from-tosca-700 hover:to-tosca-700 transition-all duration-200 transform hover:scale-[1.02] shadow-sm"
               >
                 {!hasCheckedIn ? 'Absen Masuk' : 'Absen Keluar'}
               </button>
@@ -790,7 +790,7 @@ const Dashboard = () => {
         {showCalendar && (
           <div className="bg-white rounded-lg shadow-md p-4 border border-gray-100 hidden sm:block">
             <div className="flex items-center space-x-2 mb-3">
-              <CalendarDays className="h-4 w-4 text-blue-600" />
+              <CalendarDays className="h-4 w-4 text-tosca-600" />
               <h2 className="text-base font-semibold text-gray-900">Kalender Absensi</h2>
             </div>
             <ReactCalendar
@@ -885,12 +885,12 @@ const Dashboard = () => {
 
 const StatCardMini = ({ icon: Icon, title, value, color }) => {
   const colors = {
-    blue: { bg: 'bg-blue-100', text: 'text-blue-600', gradient: 'bg-gradient-to-r from-blue-500 to-indigo-600' },
+    tosca: { bg: 'bg-tosca-100', text: 'text-tosca-600', gradient: 'bg-gradient-to-r from-tosca-500 to-tosca-600' },
     green: { bg: 'bg-green-100', text: 'text-green-600', gradient: 'bg-gradient-to-r from-green-500 to-emerald-600' },
     orange: { bg: 'bg-orange-100', text: 'text-orange-600', gradient: 'bg-gradient-to-r from-orange-500 to-amber-600' },
     purple: { bg: 'bg-purple-100', text: 'text-purple-600', gradient: 'bg-gradient-to-r from-purple-500 to-indigo-600' },
   };
-  const selectedColor = colors[color] || colors.blue;
+  const selectedColor = colors[color] || colors.tosca;
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-3 hover:shadow-md transition-all duration-200 transform hover:scale-[1.02]">
@@ -1017,7 +1017,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-xl shadow-xl w-full max-w-md max-h-[90vh] flex flex-col animate-fade-in">
-        <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-t-xl">
+        <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-gradient-to-r from-tosca-50 to-tosca-50 rounded-t-xl">
           <h2 className="text-lg font-bold text-gray-800">Kelola Profil</h2>
           <button
             onClick={onClose}
@@ -1038,7 +1038,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
               key={key}
               className={`flex-1 px-3 py-3 text-xs font-medium transition-all duration-200 flex items-center justify-center space-x-1 ${
                 activeTab === key
-                  ? 'border-b-2 border-blue-500 text-blue-600 bg-blue-50'
+                  ? 'border-b-2 border-tosca-500 text-tosca-600 bg-tosca-50'
                   : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
               }`}
               onClick={() => setActiveTab(key)}
@@ -1056,7 +1056,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-tosca-500 focus:border-tosca-500 transition-colors duration-200 text-sm"
                   value={profileData.full_name}
                   onChange={e => setProfileData({ ...profileData, full_name: e.target.value })}
                   required
@@ -1075,7 +1075,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">No. Telepon</label>
                 <input
                   type="tel"
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-tosca-500 focus:border-tosca-500 transition-colors duration-200 text-sm"
                   value={profileData.phone}
                   onChange={e => setProfileData({ ...profileData, phone: e.target.value })}
                   placeholder="Masukkan nomor telepon"
@@ -1086,12 +1086,12 @@ const ProfileEditor = ({ user, profile, onClose }) => {
           
           {activeTab === 'bank' && (
             <div className="space-y-4 animate-fade-in">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border border-blue-200">
+              <div className="bg-gradient-to-r from-tosca-50 to-tosca-50 p-4 rounded-lg border border-tosca-200">
                 <div className="flex items-center space-x-2 mb-2">
-                  <CreditCard className="h-5 w-5 text-blue-600" />
-                  <h3 className="font-semibold text-blue-800">Informasi Bank</h3>
+                  <CreditCard className="h-5 w-5 text-tosca-600" />
+                  <h3 className="font-semibold text-tosca-800">Informasi Bank</h3>
                 </div>
-                <p className="text-sm text-blue-600">Data bank hanya dapat di ubah, silahkan hubungi pihak kantor</p>
+                <p className="text-sm text-tosca-600">Data bank hanya dapat di ubah, silahkan hubungi pihak kantor</p>
               </div>
               
               <div className="space-y-4">
@@ -1161,7 +1161,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Password Baru</label>
                 <input
                   type="password"
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-tosca-500 focus:border-tosca-500 transition-colors duration-200 text-sm"
                   value={passwordData.newPassword}
                   onChange={e => setPasswordData({ ...passwordData, newPassword: e.target.value })}
                   placeholder="Masukkan password baru"
@@ -1172,7 +1172,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Konfirmasi Password</label>
                 <input
                   type="password"
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-sm"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-tosca-500 focus:border-tosca-500 transition-colors duration-200 text-sm"
                   value={passwordData.confirmPassword}
                   onChange={e => setPasswordData({ ...passwordData, confirmPassword: e.target.value })}
                   placeholder="Ulangi password baru"
@@ -1193,7 +1193,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
           {activeTab === 'profile' && (
             <button
               onClick={handleSaveProfile}
-              className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-[1.02] text-sm font-medium shadow-md"
+              className="px-4 py-2 rounded-lg bg-gradient-to-r from-tosca-600 to-tosca-600 text-white hover:from-tosca-700 hover:to-tosca-700 transition-all duration-200 transform hover:scale-[1.02] text-sm font-medium shadow-md"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Menyimpan...' : 'Simpan'}
@@ -1202,7 +1202,7 @@ const ProfileEditor = ({ user, profile, onClose }) => {
           {activeTab === 'password' && (
             <button
               onClick={handleChangePassword}
-              className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-[1.02] text-sm font-medium shadow-md"
+              className="px-4 py-2 rounded-lg bg-gradient-to-r from-tosca-600 to-tosca-600 text-white hover:from-tosca-700 hover:to-tosca-700 transition-all duration-200 transform hover:scale-[1.02] text-sm font-medium shadow-md"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Menyimpan...' : 'Ubah Password'}

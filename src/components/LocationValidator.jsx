@@ -75,10 +75,10 @@ const LocationValidator = ({ onLocationValidated }) => {
 
   if (isLoading) {
     return (
-      <div className="flex flex-col items-center justify-center p-6 bg-blue-50 rounded-lg">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-3"></div>
-        <p className="text-blue-700 font-medium">Mendapatkan lokasi Anda...</p>
-        <p className="text-blue-600 text-sm mt-1">Silakan izinkan akses lokasi</p>
+      <div className="flex flex-col items-center justify-center p-6 bg-tosca-50 rounded-lg">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-tosca-600 mb-3"></div>
+        <p className="text-tosca-700 font-medium">Mendapatkan lokasi Anda...</p>
+        <p className="text-tosca-600 text-sm mt-1">Silakan izinkan akses lokasi</p>
       </div>
     );
   }

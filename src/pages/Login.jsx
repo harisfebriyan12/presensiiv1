@@ -149,7 +149,7 @@ const Login = () => {
           title: 'Login Berhasil',
           html: `
             <div class="text-center">
-              <h3 class="text-xl font-bold text-gray-800">Selamat datang, <span class="text-blue-600">${welcomeName}</span>!</h3>
+              <h3 class="text-xl font-bold text-gray-800">Selamat datang, <span class="text-tosca-600">${welcomeName}</span>!</h3>
               <p class="mt-2 text-gray-600">Anda akan diarahkan ke dashboard</p>
             </div>
           `,
@@ -230,15 +230,15 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-tosca-600 via-tosca-700 to-tosca-800 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
       <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
         {/* Logo and Header - Responsif */}
         <div className="text-center mb-6 sm:mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full mb-4 sm:mb-6 shadow-lg transform transition-transform hover:scale-105">
-            <Building2 className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600" />
+            <Building2 className="h-8 w-8 sm:h-10 sm:w-10 text-tosca-600" />
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">Portal Karyawan</h1>
-          <p className="text-sm sm:text-base text-blue-100 px-4">Masuk untuk mengakses sistem absensi</p>
+          <p className="text-sm sm:text-base text-tosca-100 px-4">Masuk untuk mengakses sistem absensi</p>
         </div>
 
         {/* Login Form - Responsif */}
@@ -287,7 +287,7 @@ const Login = () => {
                   onChange={handleChange}
                   required
                   className="w-full pl-10 sm:pl-10 pr-4 py-3 sm:py-3 border border-gray-200 rounded-lg sm:rounded-xl 
-                           focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 
+                           focus:ring-2 focus:ring-tosca-500 focus:border-transparent transition-all duration-200
                            shadow-sm hover:shadow-md focus:shadow-md bg-gray-50 text-sm sm:text-base
                            placeholder-gray-400"
                   placeholder="Masukkan email Anda"
@@ -310,7 +310,7 @@ const Login = () => {
                   onChange={handleChange}
                   required
                   className="w-full pl-10 sm:pl-10 pr-10 py-3 sm:py-3 border border-gray-200 rounded-lg sm:rounded-xl 
-                           focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 
+                           focus:ring-2 focus:ring-tosca-500 focus:border-transparent transition-all duration-200
                            shadow-sm hover:shadow-md focus:shadow-md bg-gray-50 text-sm sm:text-base
                            placeholder-gray-400"
                   placeholder="Masukkan password Anda"
@@ -331,7 +331,7 @@ const Login = () => {
               <div className="w-full max-w-xs sm:max-w-sm">
                 <Suspense fallback={
                   <div className="h-16 sm:h-20 w-full flex items-center justify-center bg-gray-50 rounded-lg">
-                    <div className="animate-spin rounded-full h-6 w-6 sm:h-8 sm:w-8 border-b-2 border-blue-500"></div>
+                    <div className="animate-spin rounded-full h-6 w-6 sm:h-8 sm:w-8 border-b-2 border-tosca-500"></div>
                     <span className="ml-2 text-sm text-gray-500">Memuat verifikasi...</span>
                   </div>
                 }>
@@ -355,10 +355,10 @@ const Login = () => {
               type="submit"
               disabled={isLoading || !isSupabaseConfigured() || !captchaToken}
               className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base
-                         focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200
+                         focus:ring-2 focus:ring-tosca-500 focus:ring-offset-2 transition-all duration-200
                          ${isLoading 
-                           ? 'bg-blue-400 text-white cursor-wait transform scale-[0.98]' 
-                           : 'bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800'
+                           ? 'bg-tosca-400 text-white cursor-wait transform scale-[0.98]'
+                           : 'bg-tosca-600 text-white hover:bg-tosca-700 active:bg-tosca-800'
                          }
                          ${(!isSupabaseConfigured() || !captchaToken) 
                            ? 'opacity-70 cursor-not-allowed' 
@@ -383,7 +383,7 @@ const Login = () => {
             <div className="mt-4 sm:mt-6 text-center">
               <p className="text-xs sm:text-sm text-gray-500">
                 Butuh bantuan? 
-                <a href="#" className="text-blue-600 hover:text-blue-700 font-medium ml-1 transition-colors">
+                <a href="#" className="text-tosca-600 hover:text-tosca-700 font-medium ml-1 transition-colors">
                   Hubungi Administrator
                 </a>
               </p>
@@ -393,7 +393,7 @@ const Login = () => {
 
         {/* Footer */}
         <div className="mt-6 sm:mt-8 text-center">
-          <p className="text-xs sm:text-sm text-blue-100 opacity-75">
+          <p className="text-xs sm:text-sm text-tosca-100 opacity-75">
             © 2024 Portal Karyawan. Sistem Absensi Terintegrasi.
           </p>
         </div>

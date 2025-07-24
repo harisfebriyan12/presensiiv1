@@ -267,7 +267,7 @@ const BankManagement = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -297,7 +297,7 @@ const BankManagement = () => {
               </div>
               <button
                 onClick={() => setShowAddModal(true)}
-                className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 transition-colors"
               >
                 <Plus className="h-4 w-4" />
                 <span>Tambah Bank</span>
@@ -338,8 +338,8 @@ const BankManagement = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Building className="h-6 w-6 text-blue-600" />
+                <div className="w-12 h-12 bg-tosca-100 rounded-full flex items-center justify-center">
+                  <Building className="h-6 w-6 text-tosca-600" />
                 </div>
                 <div className="ml-4">
                   <p className="text-sm font-medium text-gray-600">Total Bank</p>
@@ -389,7 +389,7 @@ const BankManagement = () => {
                       placeholder="Cari bank..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -401,7 +401,7 @@ const BankManagement = () => {
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="px-6 py-4 border-b border-gray-200">
               <div className="flex items-center space-x-2">
-                <Building className="h-5 w-5 text-blue-600" />
+                <Building className="h-5 w-5 text-tosca-600" />
                 <h2 className="text-lg font-medium text-gray-900">
                   Daftar Bank ({filteredBanks.length})
                 </h2>
@@ -410,7 +410,7 @@ const BankManagement = () => {
             
             {contentLoading ? (
               <div className="flex items-center justify-center py-12">
-                <div className="inline-flex space-x-1 text-blue-600">
+                <div className="inline-flex space-x-1 text-tosca-600">
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
                   <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -452,8 +452,8 @@ const BankManagement = () => {
                                   e.target.onerror = null;
                                   e.target.src = '';
                                   e.target.parentElement.innerHTML = `
-                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                    <div class="w-10 h-10 bg-tosca-100 rounded-full flex items-center justify-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-tosca-600">
                                         <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                                         <circle cx="8.5" cy="8.5" r="1.5"></circle>
                                         <polyline points="21 15 16 10 5 21"></polyline>
@@ -463,8 +463,8 @@ const BankManagement = () => {
                                 }}
                               />
                             ) : (
-                              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                <Building className="h-5 w-5 text-blue-600" />
+                              <div className="w-10 h-10 bg-tosca-100 rounded-full flex items-center justify-center">
+                                <Building className="h-5 w-5 text-tosca-600" />
                               </div>
                             )}
                             <div className="text-sm font-medium text-gray-900">
@@ -496,7 +496,7 @@ const BankManagement = () => {
                           <div className="flex space-x-2">
                             <button
                               onClick={() => handleEdit(bank)}
-                              className="text-blue-600 hover:text-blue-900 p-1 hover:bg-blue-50 rounded"
+                              className="text-tosca-600 hover:text-tosca-900 p-1 hover:bg-tosca-50 rounded"
                               title="Edit Bank"
                             >
                               <Edit className="h-4 w-4" />
@@ -584,7 +584,7 @@ const BankManagement = () => {
                           }
                         }}
                         required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: BCA, Mandiri, BNI"
                       />
                     </div>
@@ -597,7 +597,7 @@ const BankManagement = () => {
                         name="bank_code"
                         value={formData.bank_code}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                         placeholder="Contoh: 014, 008, 009"
                       />
                     </div>
@@ -616,7 +616,7 @@ const BankManagement = () => {
                             name="bank_logo"
                             value={formData.bank_logo}
                             onChange={handleInputChange}
-                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                             placeholder="https://example.com/logo.png"
                           />
                         </div>
@@ -685,7 +685,7 @@ const BankManagement = () => {
                       value={formData.description}
                       onChange={handleInputChange}
                       rows={3}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                       placeholder="Deskripsi singkat tentang bank..."
                     />
                   </div>
@@ -698,7 +698,7 @@ const BankManagement = () => {
                     name="is_active"
                     checked={formData.is_active}
                     onChange={handleInputChange}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-tosca-600 focus:ring-tosca-500 border-gray-300 rounded"
                   />
                   <label className="ml-2 block text-sm text-gray-900">
                     Bank aktif (dapat dipilih saat menambah rekening karyawan)
@@ -717,7 +717,7 @@ const BankManagement = () => {
                   <button
                     type="submit"
                     disabled={contentLoading}
-                    className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="flex-1 bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     <div className="flex items-center justify-center space-x-2">
                       <Save className="h-4 w-4" />

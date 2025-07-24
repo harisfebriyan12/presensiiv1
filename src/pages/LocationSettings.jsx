@@ -175,7 +175,7 @@ const LocationSettings = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-flex space-x-1 text-blue-600">
+          <div className="inline-flex space-x-1 text-tosca-600">
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
@@ -244,7 +244,7 @@ const LocationSettings = () => {
                   <h2 className="text-xl font-semibold text-gray-900">Lokasi Kantor Saat Ini</h2>
                   <button
                     onClick={() => setShowLocationPicker(true)}
-                    className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    className="flex items-center space-x-2 px-4 py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 transition-colors"
                   >
                     <Edit className="h-4 w-4" />
                     <span>Edit Lokasi</span>
@@ -254,7 +254,7 @@ const LocationSettings = () => {
                 {officeLocation ? (
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <MapPin className="h-5 w-5 text-tosca-600 mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-medium text-gray-900">Alamat</p>
                         <p className="text-gray-600">{officeLocation.address}</p>
@@ -293,7 +293,7 @@ const LocationSettings = () => {
                     <p className="text-gray-500">Lokasi kantor belum diatur</p>
                     <button
                       onClick={() => setShowLocationPicker(true)}
-                      className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      className="mt-4 px-4 py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 transition-colors"
                     >
                       Atur Lokasi Sekarang
                     </button>
@@ -327,7 +327,7 @@ const LocationSettings = () => {
                             max="500"
                             value={radius}
                             onChange={(e) => setRadius(parseInt(e.target.value))}
-                            className="w-20 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-20 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
                           />
                           <span className="text-gray-600">m</span>
                         </div>
@@ -350,9 +350,9 @@ const LocationSettings = () => {
               )}
 
               {/* Info Panel */}
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h3 className="font-medium text-blue-900 mb-3">✨ Keunggulan Sistem Tanpa Google Maps</h3>
-                <div className="space-y-2 text-sm text-blue-700">
+              <div className="bg-tosca-50 rounded-lg p-6">
+                <h3 className="font-medium text-tosca-900 mb-3">✨ Keunggulan Sistem Tanpa Google Maps</h3>
+                <div className="space-y-2 text-sm text-tosca-700">
                   <p>• Tidak memerlukan API key Google Maps yang berbayar</p>
                   <p>• Sistem tetap akurat menggunakan koordinat GPS</p>
                   <p>• Mudah digunakan dengan preset lokasi populer</p>

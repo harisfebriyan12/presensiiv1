@@ -10,7 +10,7 @@ const LanguageSelector = ({ className = '' }) => {
       <select
         value={language}
         onChange={(e) => changeLanguage(e.target.value)}
-        className="appearance-none bg-white border border-gray-300 rounded-lg px-8 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="appearance-none bg-white border border-gray-300 rounded-lg px-8 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
       >
         <option value="id">🇮🇩 Indonesia</option>
         <option value="en">🇺🇸 English</option>

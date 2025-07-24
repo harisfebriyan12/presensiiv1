@@ -162,7 +162,7 @@ const SimpleLocationPicker = ({
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center">
-        <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+        <MapPin className="h-12 w-12 text-tosca-600 mx-auto mb-4" />
         <h2 className="text-xl font-semibold text-gray-900 mb-2">
           Atur Lokasi Kantor
         </h2>
@@ -188,16 +188,16 @@ const SimpleLocationPicker = ({
       )}
 
       {/* Current Location Button */}
-      <div className="bg-blue-50 p-4 rounded-lg">
+      <div className="bg-tosca-50 p-4 rounded-lg">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-medium text-blue-900">Gunakan Lokasi Saat Ini</h3>
-            <p className="text-sm text-blue-700">Otomatis mengisi koordinat berdasarkan GPS</p>
+            <h3 className="font-medium text-tosca-900">Gunakan Lokasi Saat Ini</h3>
+            <p className="text-sm text-tosca-700">Otomatis mengisi koordinat berdasarkan GPS</p>
           </div>
           <button
             onClick={getCurrentLocation}
             disabled={isLoading}
-            className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="flex items-center space-x-2 px-4 py-2 bg-tosca-600 text-white rounded-lg hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             <Navigation className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
             <span>{isLoading ? 'Mencari...' : 'Gunakan GPS'}</span>
@@ -213,7 +213,7 @@ const SimpleLocationPicker = ({
             <button
               key={preset.name}
               onClick={() => selectPresetLocation(preset)}
-              className="p-3 text-left bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-blue-300 transition-colors"
+              className="p-3 text-left bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-tosca-300 transition-colors"
             >
               <div className="font-medium text-gray-900">{preset.name}</div>
               <div className="text-xs text-gray-500">
@@ -239,7 +239,7 @@ const SimpleLocationPicker = ({
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               placeholder="Contoh: Jl. Sudirman No. 1, Jakarta Pusat"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
             />
           </div>
 
@@ -255,7 +255,7 @@ const SimpleLocationPicker = ({
                 value={selectedLocation.lat || ''}
                 onChange={(e) => handleLocationChange('lat', e.target.value)}
                 placeholder="-6.200000"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
               />
               <p className="text-xs text-gray-500 mt-1">Rentang: -90 hingga 90</p>
             </div>
@@ -269,7 +269,7 @@ const SimpleLocationPicker = ({
                 value={selectedLocation.lng || ''}
                 onChange={(e) => handleLocationChange('lng', e.target.value)}
                 placeholder="106.816666"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tosca-500 focus:border-transparent"
               />
               <p className="text-xs text-gray-500 mt-1">Rentang: -180 hingga 180</p>
             </div>
@@ -343,7 +343,7 @@ const SimpleLocationPicker = ({
         <button
           onClick={handleSave}
           disabled={!selectedLocation.lat || !selectedLocation.lng || !address.trim()}
-          className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="flex-1 bg-tosca-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-tosca-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           <div className="flex items-center justify-center space-x-2">
             <Save className="h-4 w-4" />
